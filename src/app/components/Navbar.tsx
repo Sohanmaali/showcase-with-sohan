@@ -25,7 +25,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar (Bottom Navigation) */}
-      <nav className="sm:hidden fixed bottom-0 left-0 w-full bg-[#1a1a1a] text-white py-10 rounded-tr-3xl rounded-tl-3xl ">
+      <nav className="sm:hidden fixed bottom-0 left-0 w-full bg-[#1a1a1a] text-white py-10 rounded-tr-3xl rounded-tl-3xl z-10  ">
         <div className="flex justify-around">
           {["/", "/resume", "/gallery", "/blog", "/contact"].map((path, index) => (
             <Link

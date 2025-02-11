@@ -2,16 +2,15 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store/store";
-import { isAuthenticated, removeToken } from "./utils/auth";
-import Gallery from "./gallery/page";
-import Navbar from "./components/Navbar";
 import AboutCard from "./components/AboutCard";
+import TeacherCard from "./components/TeacherCard";
+import Modal from "./components/TeacherModal";
+import { useState } from "react";
 
 const HomePage = () => {
-  const auth = useSelector((state: RootState) => state.auth);
   return (
     <div className="mb-4 md:mb-0">
-      <div className="ps-6 pe-6 md:-mt-16 mt-2">
+      <div className="ps-6 pe-6 md:-mt-16 mt-2 mb-5">
         <h1 className="text-3xl font-bold text-white">About Me</h1>
         <div className="w-12 h-1 bg-yellow-500 my-2"></div>
         <div className=" md:mx-4 my-2">
@@ -34,9 +33,34 @@ const HomePage = () => {
         <div className="font-bold text-2xl">
           <h3>My Expertise</h3>
         </div>
-        <div className="flex flex-wrap gap-6 mt-5 justify-center md:justify-start">
-          <AboutCard />
-          <AboutCard />
+        <div className="flex flex-wrap gap-6 mt-5 justify-center ">
+          <AboutCard
+            heading={"Full Stack Development"}
+            description={
+              "I am a skilled MERN stack developer with extensive experience in building robust web applications using MongoDB, Express.js, React.js, and Node.js. I specialize in API integration, server-side rendering, and database management to deliver dynamic and efficient web solutions."
+            }
+          />
+          <AboutCard
+            heading={"Github"}
+            description={
+              "GitHub is essential for version control and collaboration. Its intuitive interface and features like pull requests and issue tracking simplify the process. Continuous integration ensures up-to-date code. GitHub is vital to my success as a developer."
+            }
+          />
+          <AboutCard
+            heading={"Open Source Contributor"}
+            description={
+              " Open Source is the future. I usually take some time on weekend and contribute into opensource project. It gives me opportunity to learn from best developer's practices and also gives me a chance to helpothers and contribute into the community for the good."
+            }
+          />
+        </div>
+        <div className="font-bold text-2xl mt-4">
+          <h3>Teacher's Guidance</h3>
+        </div>
+        <div className="flex gap-3 mt-5 justify-center ">
+          <TeacherCard />
+          <TeacherCard />
+          <TeacherCard />
+          <TeacherCard />
         </div>
       </div>
     </div>

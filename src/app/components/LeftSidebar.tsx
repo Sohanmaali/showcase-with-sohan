@@ -122,7 +122,7 @@ const Sidebar = () => {
 
         <button
           onClick={() => setIsActive(!isActive)}
-          className="absolute -right-4 top-0 transform -translate-y-1/2 text-[#FFD16A] hover:text-white transition-all duration-300 ease-in-out lg:hidden flex items-center gap-1 p-2 rounded-tr-3xl border-t border-l border-[#FFD16A] rounded-bl-2xl bg-gradient-to-br from-[#FFD16A] to-gray-800 hover:from-[#FFC04D] hover:to-gray-700 shadow-md hover:shadow-lg"
+          className="absolute -right-4 top-0 transform -translate-y-1/2 text-[#FFD16A] hover:text-white transition-all duration-300 ease-in-out lg:hidden flex items-center gap-1 p-2 rounded-tr-3xl border-t border-l border-[#FFD16A] rounded-bl-2xl bg-gradient-to-br from-[#3d3c3d] to-gray-800 hover:from-[#323132] hover:to-gray-700 shadow-md hover:shadow-lg"
         >
           <IoChevronDown
             className={`text-sm transition-transform duration-300 block md:hidden ${
