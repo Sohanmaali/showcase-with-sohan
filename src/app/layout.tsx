@@ -1,171 +1,36 @@
-// // layout.tsx
-// 'use client'
-// import { Provider } from 'react-redux';
-
-// import localFont from 'next/font/local';
-// import './globals.css';
-// import 'react-datepicker/dist/react-datepicker.css';
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/thumbs";
-// import { store } from './store/store';
-// import { Toaster } from 'react-hot-toast';
-//   // Import the toast styles
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import { Suspense } from 'react';
-// import { ButtonLoader } from './components/generalComp/Loader';
-// const geistSans = localFont({
-//   src: './fonts/GeistVF.woff',
-//   variable: '--font-geist-sans',
-//   weight: '100 900',
-// });
-// const geistMono = localFont({
-//   src: './fonts/GeistMonoVF.woff',
-//   variable: '--font-geist-mono',
-//   weight: '100 900',
-// });
-
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html lang="en">
-      
-//       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-//         <Provider store={store}>
-//         <Toaster />
-//           <Header/>
-//           <Suspense fallback={<div> <ButtonLoader /></div>}>
-//             {children}
-//           </Suspense>
-//           <Footer/>
-//         </Provider>
-//       </body>
-//     </html>
-//   );
-// }
-// 'use client'
-// import { Provider } from 'react-redux';
-// import localFont from 'next/font/local';
-// import './globals.css';
-// import 'react-datepicker/dist/react-datepicker.css';
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/thumbs";
-// import { store } from './store/store';
-// import { Toaster } from 'react-hot-toast';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import { Suspense, useState, useEffect } from 'react';
-// import { ButtonLoader } from './components/generalComp/Loader';
-
-// const geistSans = localFont({
-//   src: './fonts/GeistVF.woff',
-//   variable: '--font-geist-sans',
-//   weight: '100 900',
-// });
-// const geistMono = localFont({
-//   src: './fonts/GeistMonoVF.woff',
-//   variable: '--font-geist-mono',
-//   weight: '100 900',
-// });
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   const [loading, setLoading] = useState(true);
-
-//   // Simulate a delay to show the loader on initial load
-//   useEffect(() => {
-//     const timer = setTimeout(() => setLoading(false), 0); // Adjust delay as needed
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return (
-//     <html lang="en">
-//       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-//         <Provider store={store}>
-//           <Toaster />
-//           <Header />
-//           {loading ? (
-//             <div className='h-screen flex items-center justify-center'>
-//               <ButtonLoader />
-//             </div>
-//           ) : (
-//             <Suspense fallback={<div className='h-screen flex items-center justify-center'><ButtonLoader /></div>}>
-//               {children}
-//             </Suspense>
-//           )}
-//           <Footer />
-//         </Provider>
-//       </body>
-//     </html>
-//   );
-// }
-'use client'
-import { Provider } from 'react-redux';
-import localFont from 'next/font/local';
-import './globals.css';
-import 'react-datepicker/dist/react-datepicker.css';
+"use client";
+import { Provider } from "react-redux";
+import "./globals.css";
+import "react-datepicker/dist/react-datepicker.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { store } from './store/store';
-import { Toaster } from 'react-hot-toast';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { Suspense, useState, useEffect } from 'react';
-import { ButtonLoader } from './components/generalComp/Loader';
-
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
+import { store } from "./store/store";
+import { Toaster } from "react-hot-toast";
+import LeftSidebar from "./components/LeftSidebar";
+import Navbar from "./components/Navbar";
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const [loading, setLoading] = useState(true);
-
-  // Simulate a delay to show the loader on initial load
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // Adjust delay as needed
-    return () => clearTimeout(timer);
-  }, []);
-  
-
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className="overflow-x-hidden bg-[#121212]">
+      <body className="antialiased overflow-x-hidden bg-[#121212] text-white">
         <Provider store={store}>
           <Toaster />
-          {loading ? (
-            <div className='h-screen flex items-center justify-center'>
-              <ButtonLoader />
-            </div>
-          ) : (
-            <>
-              <Header />
-              <Suspense fallback={<div className='h-screen flex items-center justify-center'><ButtonLoader /></div>}>
+          <div className="w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-10 ">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 h-full">
+              <div className="lg:col-span-3 w-full">
+                <LeftSidebar />
+              </div>
+
+              {/* Main Content */}
+              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 md:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0">
+                <Navbar />
                 {children}
-              </Suspense>
-              <Footer />
-            </>
-          )}
+              </div>
+            </div>
+          </div>
         </Provider>
       </body>
     </html>

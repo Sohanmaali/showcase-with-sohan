@@ -1,42 +1,44 @@
-'use client';
+"use client";
 
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from './store/store';
-import { isAuthenticated, removeToken } from './utils/auth';
-import ImageSlider from './components/ImageSlider';
-import CategoryComp from './components/card/CategoryComp';
-import ProductList from './components/card/ProductList';
-import InfiniteMarquee from './components/generalComp/Marquee';
-import QuickShell from './components/generalComp/QuickShell';
-import Testimonials from './components/generalComp/Testimonial';
-import ScrollCounter from './components/generalComp/ScrollCounter';
-import { GoOnTopButton } from './components/generalComp/Buttons';
-import LoginPage from './pages/auth/login/page';
-import DetaulsCraft from './components/generalComp/HowItIsWorkComp';
-import ScrapProductCard from './components/card/ScrapProductCard';
-import CategoryCard from './components/card/CategoryCard';
-import { ButtonLoader } from './components/generalComp/Loader';
-import HeroSection from './components/Home/HeroSection';
-import HowItIsWorkComp from './components/generalComp/HowItIsWorkComp';
-import WhyChooseUs from './components/generalComp/WhyChooseUs';
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "./store/store";
+import { isAuthenticated, removeToken } from "./utils/auth";
+import Gallery from "./gallery/page";
+import Navbar from "./components/Navbar";
+import AboutCard from "./components/AboutCard";
+
 const HomePage = () => {
   const auth = useSelector((state: RootState) => state.auth);
   return (
-    <div>
-        <div>
-          <ImageSlider/>
-          <CategoryComp/>
-          {/* <ProductList/> */}
-         
-           <HowItIsWorkComp/>
-           <InfiniteMarquee/>
-           <HeroSection/>
-          <WhyChooseUs/>
-          <QuickShell/>
-          <ScrollCounter/>
-          <Testimonials/>
-          <GoOnTopButton/>
+    <div className="mb-4 md:mb-0">
+      <div className="ps-6 pe-6 md:-mt-16 mt-2">
+        <h1 className="text-3xl font-bold text-white">About Me</h1>
+        <div className="w-12 h-1 bg-yellow-500 my-2"></div>
+        <div className=" md:mx-4 my-2">
+          <p className="text-gray-300 md:mt-14">
+            Hey there, I'm Sohan Maali, a MERN Stack Developer at Foduu. I have
+            a passion for building scalable web applications and crafting
+            seamless user experiences. My journey in development revolves around
+            turning complex challenges into elegant, high-performing solutions.
+          </p>
+
+          <p className="text-gray-300 mt-4">
+            With a keen interest in modern web technologies, I am constantly
+            refining my skills, staying up to date with industry trends, and
+            exploring innovative approaches to development. Beyond coding, I’m
+            always eager to collaborate, learn, and contribute to projects that
+            push the boundaries of web technology.
+          </p>
         </div>
+        {/* Flex container for cards */}
+        <div className="font-bold text-2xl">
+          <h3>My Expertise</h3>
+        </div>
+        <div className="flex flex-wrap gap-6 mt-5 justify-center md:justify-start">
+          <AboutCard />
+          <AboutCard />
+        </div>
+      </div>
     </div>
   );
 };
