@@ -15,15 +15,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
-      <body className="relative antialiased overflow-x-hidden text-white bg-[#121212]">
-        {/* Background Image Overlay */}
+      <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center ">
+      
         <div
-          className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-center bg-no-repeat opacity-30"
+          className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-no-repeat opacity-30"
         ></div>
 
         <Provider store={store}>
           <Toaster />
-          <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-10">
+          <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-10 main-body">
             <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 h-full">
               <div className="lg:col-span-3 w-full">
                 <LeftSidebar />
