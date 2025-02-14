@@ -1,10 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import SearchBar from "./SearchBar";
-import { Login } from "./auth/AuthButton";
 import { isAuthenticated } from "../utils/auth";
 import Link from "next/link";
-import ProfileDropdown from "./auth/ProfileDropDown";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../store/slices/authSlice";
 import BasicProvider from "../utils/basicprovider";
