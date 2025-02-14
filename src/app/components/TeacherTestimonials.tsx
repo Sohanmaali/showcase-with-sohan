@@ -33,7 +33,7 @@ export default function TeacherTestimonials() {
   };
 
   // Scroll card container when scrollbar is dragged
-  const handleThumbDrag = (e) => {
+  const handleThumbDrag = (e: any) => {
     if (!scrollRef.current || !trackRef.current) return;
 
     const trackLeft = trackRef.current.getBoundingClientRect().left;
