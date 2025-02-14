@@ -25,7 +25,6 @@ export default function TeacherTestimonials() {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       const trackWidth = trackRef.current.clientWidth;
 
-      // Calculate new thumb position
       setThumbPosition(
         (scrollLeft / (scrollWidth - clientWidth)) * (trackWidth - thumbWidth)
       );
