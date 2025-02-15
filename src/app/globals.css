@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Hide scrollbar for Firefox */
 /* * {
   scrollbar-width: none;
@@ -23,3 +22,35 @@ body::-webkit-scrollbar {
   scrollbar-width: none;
 }
 
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Normal Speed for Images */
+.animate-marquee-right {
+  animation: marquee-right 15s linear infinite; /* Adjust image speed */
+}
+
+.animate-marquee-left {
+  animation: marquee-left 15s linear infinite; /* Adjust image speed */
+}
+
+/* Slower Speed for Text */
+.animate-text-marquee {
+  animation: marquee-right 30s linear infinite; /* Increased duration for slower text */
+}

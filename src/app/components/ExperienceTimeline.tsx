@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function ExperienceTimeline() {
@@ -24,7 +25,7 @@ export default function ExperienceTimeline() {
         </div>
       </div>
 
-      <ol className="relative border-s border-gray-200 dark:border-gray-700 md:ms-20  ms-16">
+      <ol className="relative border-s border-[#383838] dark:border-[#383838] md:ms-20  ms-16">
         <li className="mb-10 ms-6">
           <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
             <svg
@@ -37,7 +38,9 @@ export default function ExperienceTimeline() {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            InfoBeans Foundation Indore
+            <Link href="https://www.infobeans.com/infobeans-foundation/">
+              InfoBeans Foundation Indore
+            </Link>
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -62,7 +65,9 @@ export default function ExperienceTimeline() {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            FODUU - Web Design Company India
+            <Link href="https://www.foduu.com/">
+              FODUU - Web Design Company India
+            </Link>
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -80,9 +85,9 @@ export default function ExperienceTimeline() {
   );
 }
 
-
-/* From Uiverse.io by ilkhoeri */ 
-{/* <div
+/* From Uiverse.io by ilkhoeri */
+{
+  /* <div
   class="[--background:#fff] [--color:#000] [--muted:#242424] [--muted-foreground:#9c9c9c] [--border:#2e2e2e] [--shadow:rgba(60,64,67,0.3)_0_1px_2px_0,rgba(60,64,67,0.15)_0_2px_6px_2px] w-4/5 h-auto rounded-2xl bg-white[box-shadow:var(--shadow)]"
 >
   <div
@@ -220,4 +225,5 @@ export default function ExperienceTimeline() {
       </div>
     </div>
   </div>
-</div> */}
+</div> */
+}
