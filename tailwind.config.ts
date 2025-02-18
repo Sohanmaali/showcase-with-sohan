@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        "custom": "1250px", // Custom breakpoint at 1250px
+        "custom": "1250px",
       },
       colors: {
         relatedBlack: "var(--related-black)",

@@ -86,7 +86,7 @@ const Tabs = () => {
                   <div className="w-12 h-1 bg-yellow-500 my-2"></div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 justify-center place-items-center">
                 {[
                   "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
                   "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",

@@ -1,4 +1,5 @@
 "use client";
+import useCopyProtect from "@/hooks/useCopyProtect";
 import ExpertiseCard from "./components/ExpertiseCard";
 import TeacherTestimonials from "./components/TeacherTestimonials";
 import TechnologyTestimonials from "./components/TechnologyTestimon";
@@ -10,7 +11,7 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold text-white">About Me</h1>
         <div className="w-12 h-1 bg-yellow-500 my-2"></div>
         <div className=" md:mx-4 my-2">
-          <p className="text-gray-300 md:mt-14">
+          <p className="text-gray-300 md:mt-14 ">
             Hey there, I'm Sohan Maali, a MERN Stack Developer at Foduu. I have
             a passion for building scalable web applications and crafting
             seamless user experiences. My journey in development revolves around

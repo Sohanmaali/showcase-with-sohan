@@ -3,17 +3,13 @@ import Image from "next/image";
 export default function Card({ image }: any) {
   return (
     <>
-      <div
-        id="toast-notification"
-        className="w-full  p-4 text-gray-900 bg-white rounded-lg shadow dark:bg-gray-800 dark:text-gray-300"
-        role="alert"
-      >
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
         <Image
           src={image}
           width={100}
-          height={20}
+          height={100}
           alt="logo"
-          className="w-full object-fill"
+          className="rounded-lg w-full h-60 object-fill"
         />
       </div>
     </>

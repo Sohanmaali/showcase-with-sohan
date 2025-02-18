@@ -5,8 +5,8 @@ export default function TeacherModal({
   isOpen,
   setIsOpen,
 }: {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  isOpen: any;
+  setIsOpen: (isOpen: any) => void;
 }) {
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -16,7 +16,7 @@ export default function TeacherModal({
         modalRef.current &&
         !modalRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false);
+        setIsOpen(null);
       }
     }
 
@@ -35,19 +35,16 @@ export default function TeacherModal({
 
   return (
     <>
-      {/* Overlay */}
       <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-        {/* Modal */}
         <div
           ref={modalRef}
           className="bg-[#1E1E1F] rounded-3xl shadow-xl max-w-2xl w-full relative"
         >
-          {/* Close Button */}
           <button
             onClick={(e) => {
-              e.stopPropagation(); // Prevent event bubbling
-              console.log("Close button clicked"); // Debug log
-              setIsOpen(false);
+              e.stopPropagation(); 
+              console.log("Close button clicked"); 
+              setIsOpen(null);
             }}
             className="absolute right-4 top-4 text-3xl text-gray-500 hover:text-gray-700 transition-colors bg-[#272728] rounded-lg p-1"
           >
@@ -71,7 +68,7 @@ export default function TeacherModal({
           <div className="p-8">
             <div className="flex items-center gap-8">
               <Image
-                src="/assets/images/sohan.jpg"
+                src={isOpen?.image}
                 alt="Sohan Maali"
                 width={100}
                 height={100}
@@ -79,12 +76,10 @@ export default function TeacherModal({
               />
               <div>
                 <h1 className="text-2xl font-bold text-white whitespace-nowrap">
-                  Vaibhav Sir
+                  {isOpen?.name}
                 </h1>
                 <p className="text-white italic leading-relaxed whitespace-pre-line mt-3">
-                  Amidst books, laughter, and endless dreams, Teachers'
-                  guidance, like a gentle stream. Their dedication, a beacon so
-                  bright, Illuminates our futures' shining light.
+                 {isOpen?.about}
                 </p>
               </div>
             </div>

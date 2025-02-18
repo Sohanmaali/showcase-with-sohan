@@ -9,17 +9,34 @@ import { store } from "./store/store";
 import { Toaster } from "react-hot-toast";
 import LeftSidebar from "./components/LeftSidebar";
 import Navbar from "./components/Navbar";
+import { usePathname } from "next/navigation";
+import useCopyProtect from "@/hooks/useCopyProtect";
+
+const pageConfig: Record<string, { title: string }> = {
+  "/": { title: "About Me" },
+  "/resume": { title: " My Resume" },
+  "/project": { title: "My Projects" },
+  "/code": { title: "My Codes" },
+  "/gallery": { title: "My Gallery" },
+  "/blog": { title: "My Blogs" },
+  "/contact": { title: "Contact With Sohan" },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const pathname: any = usePathname();
+  const config = pageConfig[pathname];
+  // useCopyProtect();
+
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
+      <head>
+        <title>{config?.title || "Sohan"}</title>
+        <link rel="icon" href="/assets/images/emoji.png" />{" "}
+      </head>
       <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center ">
-      
-        <div
-          className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-no-repeat opacity-30"
-        ></div>
+        <div className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-no-repeat opacity-30"></div>
 
         <Provider store={store}>
           <Toaster />

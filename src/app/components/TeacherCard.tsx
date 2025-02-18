@@ -3,19 +3,19 @@ import Image from "next/image";
 import Modal from "./TeacherModal";
 import { useState } from "react";
 
-const TeacherCard = ({ value }: any) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const TeacherCard = ({ teacher }: any) => {
+  const [isModalOpen, setIsModalOpen] = useState<any>(null);
 
   return (
     <div
       className="flex justify-center items-center h-44 px-4 md:px-8 cursor-pointer"
-      onClick={() => setIsModalOpen(true)}
+      onClick={() => setIsModalOpen(teacher)}
     >
-      <div className="relative bg-gray-800 text-white p-6 rounded-2xl shadow-lg w-80 md:w-96">
+      <div className="relative bg-[#222224] text-white p-6 rounded-2xl shadow-lg w-80 md:w-96">
         {/* Profile Image */}
         <div className="absolute -top-6 ">
           <img
-            src="https://randomuser.me/api/portraits/men/1.jpg"
+            src={teacher?.image}
             alt="Profile"
             className="w-14 h-14 rounded-2xl border-2 border-gray-700 shadow-md"
           />
@@ -23,10 +23,9 @@ const TeacherCard = ({ value }: any) => {
 
         {/* Card Content */}
         <div className="mt-2">
-          <h2 className="text-lg font-bold text-center">Vaibhav Sir</h2>
+          <h2 className="text-lg font-bold text-center">{teacher?.name}</h2>
           <p className="text-gray-300 text-sm mt-1 line-clamp-2">
-            Amidst books, laughter, and endless dreams, Teachers' guidance, like
-            a gentle stream. Their dedication...
+            {teacher?.about}
           </p>
         </div>
       </div>

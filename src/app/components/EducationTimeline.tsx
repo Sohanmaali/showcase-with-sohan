@@ -37,18 +37,19 @@ export default function EducationTimeline() {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-          <Link href="https://www.rgpv.ac.in/" target="_blank">Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</Link>
-            
+            <Link href="https://www.rgpv.ac.in/" target="_blank">
+              Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+            </Link>
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on January 13th, 2022
+            2023-2025
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Currently pursuing a B.Sc. in Biotechnology with a focus on Botany,
-            Zoology, and Chemistry at Government College, Khategaon.
-            Demonstrated excellence in coursework related to plant biology,
-            animal science, genetics, and chemical processes.
+            Currently pursuing an MCA (Master of Computer Applications) at Patel
+            College Of Science & Technology Indore. Demonstrated excellence in
+            coursework related to software development, database management,
+            algorithms, and computer networking.
           </p>
         </li>
         <li className="mb-10 ms-6">
@@ -63,20 +64,18 @@ export default function EducationTimeline() {
             </svg>
           </span>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-          
-          <Link href="http://www.bubhopal.ac.in/1068/Home" target="_blank">Barkatullah Vishwavidyalaya, Bhopal</Link>
-          
-            
+            <Link href="http://www.bubhopal.ac.in/1068/Home" target="_blank">
+              Barkatullah Vishwavidyalaya, Bhopal
+            </Link>
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on January 13th, 2022
+            2020-2023
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Currently pursuing a B.Sc. in Biotechnology with a focus on Botany,
-            Zoology, and Chemistry at Government College, Khategaon.
-            Demonstrated excellence in coursework related to plant biology,
-            animal science, genetics, and chemical processes.
+            Completed a BCA (Bachelor of Computer Applications) from Harda
+            Adarsh College. Gained expertise in programming, database
+            management, software development, and computer networking.
           </p>
         </li>
         <li className="mb-10 ms-6">
@@ -91,18 +90,20 @@ export default function EducationTimeline() {
             </svg>
           </span>
           <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-          
-          <Link href="https://schools.org.in/dewas/23230620403/govt-hss-excellence-khategaon.html" target="_blank">Govt High School Khategaon</Link>
-          
-            
+            <Link
+              href="https://schools.org.in/dewas/23230620403/govt-hss-excellence-khategaon.html"
+              target="_blank"
+            >
+              Govt High School Khategaon
+            </Link>
           </h3>
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on December 7th, 2021
+            2019-2020
           </time>
           <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            Completed 12th grade with a specialization in Biology, demonstrating
-            a strong foundation in biological sciences. Achieved 79% in the
-            12th-grade board examinations.
+            Completed 12th Grade with a specialization in the Science Stream,
+            demonstrating a strong foundation in Mathematics and Sciences.
+            Achieved 75% in the 12th-grade board examinations.
           </p>
         </li>
         <li className="ms-6">
@@ -120,15 +121,14 @@ export default function EducationTimeline() {
             Gaytri Vidya Mandir, Khategaon
           </h3>
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on December 2nd, 2021
+            2017-2018
           </time>
           <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            Get started with dozens of web components and interactive elements
-            built on top of Tailwind CSS.
+            Completed 10th Grade with a specialization in Computer Science,
+            achieving 75% in the 10th-grade board examinations.
           </p>
         </li>
       </ol>
-    
     </>
   );
 }

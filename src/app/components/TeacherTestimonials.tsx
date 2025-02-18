@@ -2,6 +2,33 @@
 import { useRef, useState, useEffect } from "react";
 import TeacherCard from "./TeacherCard";
 
+const teacherDetails = [
+  {
+    image: "/assets/teacher/vaibhav_sir.jpg",
+    name: "Vaibhav sir",
+    about:
+      "Amidst books, laughter, and endless dreams, Teachers' guidance,like a gentle stream. Their dedication, a beacon so bright,illuminates our futures shining light.",
+  },
+  {
+    image: "/assets/teacher/pawan_sir.jpg",
+    name: "Pawan sir",
+    about:
+      "Under the mentorship of Pawan Sahu Sir, a Java expert, honed skills in Java programming with a meticulous and insightful approach. Pawan's commitment to excellence and expertise in navigating Java complexities contributed significantly to a deeper understanding of robust and scalable solutions.",
+  },
+  {
+    image: "/assets/teacher/gourav_sir.jpg",
+    name: "Gourav sir",
+    about:
+      "Gourav Kothari Sir, my Frontend Technology trainer, is a masterful guide, blending expertise with passion to create a beautiful learning journey through the intricate world of web development. His teachings transform code into a harmonious masterpiece, making the complex dance of HTML, CSS, and JavaScript a captivating art form.",
+  },
+  {
+    image: "/assets/teacher/ayush_sir.jpeg",
+    name: "Ayush Sir",
+    about:
+      "Managed by Ayush Rajput Sir, a seasoned and dynamic manager known for fostering a collaborative and goal-driven work environment. Under his leadership, gained valuable insights into project management, team coordination, and strategic decision-making. Ayush's mentorship has contributed to the development of effective problem-solving skills and a results-oriented mindset. His managerial guidance has been instrumental in achieving project milestones and maintaining a high standard of work efficiency.",
+  },
+];
+
 export default function TeacherTestimonials() {
   const scrollRef: any = useRef(null);
   const trackRef: any = useRef(null);
@@ -14,12 +41,10 @@ export default function TeacherTestimonials() {
       const { clientWidth, scrollWidth } = scrollRef.current;
       const trackWidth = trackRef.current.clientWidth;
 
-      // Calculate scrollbar thumb width (based on visible area)
       setThumbWidth((clientWidth / scrollWidth) * trackWidth);
     }
   }, []);
 
-  // Sync scrollbar with card container
   const handleScroll = () => {
     if (scrollRef.current && trackRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -31,7 +56,6 @@ export default function TeacherTestimonials() {
     }
   };
 
-  // Scroll card container when scrollbar is dragged
   const handleThumbDrag = (e: any) => {
     if (!scrollRef.current || !trackRef.current) return;
 
@@ -43,7 +67,6 @@ export default function TeacherTestimonials() {
 
     setThumbPosition(newThumbPos);
 
-    // Convert thumb position to scroll position
     const scrollLeft =
       (newThumbPos / (trackRef.current.clientWidth - thumbWidth)) *
       (scrollRef.current.scrollWidth - scrollRef.current.clientWidth);
@@ -53,23 +76,21 @@ export default function TeacherTestimonials() {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto py-2 ">
-      {/* Scrollable Cards */}
       <div
         ref={scrollRef}
         onScroll={handleScroll}
         className="flex gap-10 w-full overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pl-5 "
       >
-        {Array.from({ length: 5 }).map((_, index) => (
+        {teacherDetails.map((teacher, index) => (
           <div
             key={index}
             className={`snap-start ${index === 0 ? "-ml-5" : ""}`}
           >
-            <TeacherCard />
+            <TeacherCard teacher={teacher} />
           </div>
         ))}
       </div>
 
-      {/* Custom Scrollbar (50% width) */}
       <div
         ref={trackRef}
         className="relative md:w-1/2  mt-2 h-2 bg-gray-300 rounded-full mx-3 md:mx-auto"

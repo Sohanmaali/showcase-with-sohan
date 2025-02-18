@@ -44,13 +44,13 @@ export default function ExperienceTimeline() {
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on January 13th, 2022
+            April 2023–June 2024
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Currently pursuing a B.Sc. in Biotechnology with a focus on Botany,
-            Zoology, and Chemistry at Government College, Khategaon.
-            Demonstrated excellence in coursework related to plant biology,
-            animal science, genetics, and chemical processes.
+            Completed ITEP training at InfoBeans Foundation, Indore Gained
+            hands-on experience in software development, programming, and IT
+            solutions, enhancing skills in web development, database management,
+            and software engineering best practices.
           </p>
         </li>
         <li className="mb-10 ms-6">
@@ -71,13 +71,11 @@ export default function ExperienceTimeline() {
           </h3>
 
           <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-            Released on January 13th, 2022
+            July 2024–Present
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Currently pursuing a B.Sc. in Biotechnology with a focus on Botany,
-            Zoology, and Chemistry at Government College, Khategaon.
-            Demonstrated excellence in coursework related to plant biology,
-            animal science, genetics, and chemical processes.
+            Responsible for web design and development, contributing to various
+            projects with expertise in front-end and back-end technologies.
           </p>
         </li>
       </ol>
