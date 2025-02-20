@@ -13,7 +13,7 @@ export default function ImageSlider() {
     "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
     "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
   ]);
-  const swiperRef = useRef<any>(null); // Typed as 'any' for Swiper instance
+  const swiperRef = useRef<any>(null); 
   const prevRef = useRef<any>(null);
   const nextRef = useRef<any>(null);
 
@@ -28,10 +28,10 @@ export default function ImageSlider() {
         swiperInstance.navigation.update();
       }
     }
-  }, [sliderData]); // Trigger only when sliderData has been loaded.
+  }, [sliderData]); 
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         ref={prevRef}
         className="absolute top-1/2 left-4 z-10 transform -translate-y-1/2  text-relatedWhite hover:bg-mutedColor p-3 "
@@ -69,11 +69,11 @@ export default function ImageSlider() {
         {sliderData.length > 0 &&
           sliderData.map((slider: any, index: number) => (
             <SwiperSlide key={index}>
-              <div className="relative">
+              <div className=" ">
                 <img
                   src={`${slider}`}
                   alt={`slider ${index + 1}`}
-                  className="w-full h-60 sm:h-60 md:h-80 object-fill"
+                  className="w-full h-40 sm:h-60 md:h-80 object-fit"
                 />
               </div>
             </SwiperSlide>

@@ -1,6 +1,36 @@
 "use client";
 import React from "react";
 
+const infoBeans = [
+  {
+    eventName: "Guru purnima",
+    images: [
+      "/assets/images/gurupurnima/g1.jpg",
+      "/assets/images/gurupurnima/g3.jpg",
+      "/assets/images/gurupurnima/g4.jpg",
+      "/assets/images/gurupurnima/g5.jpg",
+    ],
+  },
+  {
+    eventName: "Shree ganesh chaturthi",
+    images: [
+      "/assets/images/ganesh_chaturthi/ganeshji1.jpg",
+      "/assets/images/ganesh_chaturthi/ganeshji4.jpg",
+      "/assets/images/ganesh_chaturthi/gnaesh2.jpg",
+      "/assets/images/ganesh_chaturthi/rangloi2.jpg",
+    ],
+  },
+  {
+    eventName: "Birthday",
+    images: [
+      "/assets/images/Birthday/birt6.jpg",
+      "/assets/images/Birthday/birth-day1.jpg",
+      "/assets/images/Birthday/birth2.jpg",
+      "/assets/images/Birthday/birth6.jpg",
+    ],
+  },
+];
+
 export default function Gallery() {
   return (
     <>
@@ -21,6 +51,7 @@ import { useState } from "react";
 import ImageSlider from "../components/journey/slider";
 import MarqueeSlider from "../components/journey/MarqueeSlider";
 import Card from "../components/infoBeans/Card";
+import FlipCard from "../components/journey/FlipCard";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -71,6 +102,12 @@ const Tabs = () => {
             <div className=" mt-3 uppercase text-[#9191A1] text-2xl font-bold">
               See the journey of one year
             </div>
+            <div className="my-10  text-[#9191A1] flex flex-col md:flex-row gap-10 items-center justify-center">
+              <FlipCard />
+              <FlipCard />
+              <FlipCard />
+            </div>
+
             <div className=" mt-3 uppercase text-[#9191A1] text-2xl font-bold">
               Coding
             </div>
@@ -78,76 +115,25 @@ const Tabs = () => {
           </div>
         )}
         {activeTab === "tab2" && (
-          <div>
-            <div>
-              <div className="mb-4 md:mb-0">
-                <div className="ps-6 pe-6 mb-5">
-                  <h1 className="text-xl font-bold text-white">Event Name</h1>
-                  <div className="w-12 h-1 bg-yellow-500 my-2"></div>
+          <>
+            {infoBeans?.map((event, index) => (
+              <div key={index}>
+                <div className={`mb-4 md:mb-0 ${index > 0 ? "mt-6" : ""}`}>
+                  <div className=" pe-6 mb-5">
+                    <h1 className="text-xl font-bold text-white">
+                      {event?.eventName}
+                    </h1>
+                    <div className="w-12 h-1 bg-yellow-500 my-2"></div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+                  {event?.images.map((image, imgIndex) => (
+                    <Card image={image} key={imgIndex} />
+                  ))}
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 justify-center place-items-center">
-                {[
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
-                ].map((image: string, index: number) => (
-                  <Card image={image} key={index} />
-                ))}
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="mb-4 md:mb-0">
-                <div className="ps-6 pe-6 mb-5">
-                  <h1 className="text-xl font-bold text-white">Event Name</h1>
-                  <div className="w-12 h-1 bg-yellow-500 my-2"></div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
-                ].map((image: string, index: number) => (
-                  <Card image={image} key={index} />
-                ))}
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="mb-4 md:mb-0">
-                <div className="ps-6 pe-6 mb-5">
-                  <h1 className="text-xl font-bold text-white">Event Name</h1>
-                  <div className="w-12 h-1 bg-yellow-500 my-2"></div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
-                ].map((image: string, index: number) => (
-                  <Card image={image} key={index} />
-                ))}
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="mb-4 md:mb-0">
-                <div className="ps-6 pe-6 mb-5">
-                  <h1 className="text-xl font-bold text-white">Event Name</h1>
-                  <div className="w-12 h-1 bg-yellow-500 my-2"></div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-                  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
-                ].map((image: string, index: number) => (
-                  <Card image={image} key={index} />
-                ))}
-              </div>
-            </div>
-          </div>
+            ))}
+          </>
         )}
         {activeTab === "tab3" && <p>Content for Tab 3</p>}
       </div>

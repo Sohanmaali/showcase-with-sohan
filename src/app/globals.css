@@ -75,13 +75,13 @@ body::-webkit-scrollbar {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
-  animation: marquee-reverse 15s linear infinite;
+  animation: marquee-reverse 30s linear infinite;
 }
 
 .animate-text-marquee {
@@ -109,4 +109,23 @@ input:-webkit-autofill:hover {
   box-shadow: none !important;
 }
 
+/* ============================================ */
 
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

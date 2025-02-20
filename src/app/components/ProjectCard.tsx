@@ -1,66 +1,52 @@
-// import Image from "next/image";
-// import React from "react";
-
-// export default function ProjectCard() {
-//   return (
-//     <div>
-//       <div className="relative group duration-500 cursor-pointer group overflow-hidden relative text-gray-50 h-72 w-96  rounded-2xl hover:duration-700 duration-700">
-//         <div className="w-96 h-72 bg-lime-400 text-gray-800">
-//           {/* <div className="flex flex-row justify-between"></div> */}
-//           <Image src="/assets/images/carmucho.png" width={100} height={100}  alt="logo"/ >
-//         </div>
-//         <div className="absolute bg-gray-50 -bottom-24 w-96 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-//           <span className="text-lime-400 font-bold text-xs">CarMucho</span>
-//           <span className="text-gray-800 font-bold text-3xl">Cheat Sheet</span>
-//           <p className="text-neutral-800">
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function ProjectCard() {
+interface Project {
+  name: string;
+  details: string;
+  technology: string[];
+  image: string;
+  url: string;
+}
+
+export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href="https://carmucho.com/" target="_blank">
-      <div>
-        <div className="relative group duration-500 cursor-pointer overflow-hidden text-gray-50 h-72 w-96 rounded-2xl hover:duration-700">
-          {/* Image fills the entire card */}
+    <Link href={project.url}>
+      <div className=" relative h-72 mt-6  md:w-full rounded-3xl mt-6 flex justify-end flex-col  z-[1] overflow-hidden">
+        <div className="h-full w-full ">
           <div className="absolute inset-0">
             <Image
-              src="/assets/images/carmucho.png"
+              src={project?.image}
               fill
               alt="logo"
-              className="object-cover"
+              className="object-cover w-74 md:w-40"
             />
           </div>
+        </div>
 
-          {/* Overlay content */}
-          <div className="absolute bg-[#282829] -bottom-20 w-96 h-40 p-3 flex flex-col gap-1 group-hover:bottom-0 group-hover:duration-600 duration-500">
-            <span className="text-white font-bold text-3xl">CarMucho</span>
-            <span className="text-white font-bold text-xs">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis
-              natus, facere ratione beatae corrupti explicabo delectus repellat
-              voluptates nisi velit odio reprehenderit consequuntur iusto hic,
-              labore perferendis vel sit.
-            </span>
-            <p className="text-neutral-800 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              {["NestJS", "NestJS", "NestJS", "NestJS", "NestJS"].map(
-                (tech, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 w-fit font-bold text-xs text-white bg-lime-400 rounded-xl"
-                  >
-                    {tech}
-                  </span>
-                )
-              )}
-            </p>
+        <div className="bg-[#282829] group">
+          <div className="text-white z-[2] relative w-full flex flex-col bg-[#282829] px-6">
+            <div className="h-14 w-full">
+              <h1 className="text-2xl font-bold italic relative group transition-all duration-300">
+                {project?.name}
+                <div className="border-b border-transparent bg-gradient-to-r from-blue-500 to-purple-500 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+              </h1>
+            </div>
           </div>
+          <p className="font-nunito block bg-[#282829] text-white font-light px-6 relative h-[0em] group-hover:h-[13em] leading-[1.2em] duration-500 overflow-hidden">
+            {project?.details}
+            <div className="flex justify-center items-center mt-2 h-fit w-fit gap-[0.5em]">
+              {project?.technology.map((category, index) => (
+                <div
+                  key={index}
+                  className=" p-1 w-24 text-center rounded-[0.5em] text-white  text-[1em] font-normal group-hover:bg-[#1A1A1A] group-hover:text-white duration-300 "
+                >
+                  <p>{category}</p>
+                </div>
+              ))}
+            </div>
+          </p>
         </div>
       </div>
     </Link>

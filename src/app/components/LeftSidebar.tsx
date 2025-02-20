@@ -38,7 +38,7 @@ const socialLinks = [
   { icon: IoLogoGithub, link: "https://github.com/Sohanmaali" },
   {
     icon: IoLogoLinkedin,
-    link: "https://in.linkedin.com/in/mohan-oon-b8130b234?trk=profile-badge",
+    link: "https://www.linkedin.com/in/sohan-maali1/",
   },
   {
     icon: IoLogoInstagram,

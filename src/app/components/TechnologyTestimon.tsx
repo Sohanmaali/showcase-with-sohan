@@ -3,6 +3,47 @@ import { useRef, useState, useEffect } from "react";
 import TeacherCard from "./TeacherCard";
 import Image from "next/image";
 
+const technology = [
+  {
+    name: "JavaScript",
+    url: "/assets/images/technology/javascript-horizontal.svg",
+  },
+  {
+    name: "Nextjs",
+    url: "/assets/images/technology/nextjs-2.svg",
+  },
+  {
+    name: "React",
+    url: "/assets/images/technology/logo-react.svg",
+  },
+  {
+    name: "Nest js",
+    url: "/assets/images/technology/NestJS-logo-wordmark.svg",
+  },
+  {
+    name: "hibernate",
+    url: "/assets/images/technology/hibernate-ar21.svg",
+  },
+  {
+    name: "java",
+    url: "/assets/images/technology/java-horizontal.svg",
+  },
+
+  {
+    name: "mysql",
+    url: "/assets/images/technology/mysql-horizontal.svg",
+  },
+  {
+    name: "JavaScript",
+    url: "/assets/images/technology/w3_css-ar21.svg",
+  },
+
+  {
+    name: "html",
+    url: "/assets/images/technology/w3_html5-ar21 (1).svg",
+  },
+];
+
 export default function TechnologyTestimonials() {
   const scrollRef: any = useRef(null);
   const trackRef: any = useRef(null);
@@ -34,7 +75,7 @@ export default function TechnologyTestimonials() {
   };
 
   // Scroll card container when scrollbar is dragged
-  const handleThumbDrag = (e:any) => {
+  const handleThumbDrag = (e: any) => {
     if (!scrollRef.current || !trackRef.current) return;
 
     const trackLeft = trackRef.current.getBoundingClientRect().left;
@@ -61,40 +102,7 @@ export default function TechnologyTestimonials() {
         onScroll={handleScroll}
         className="flex  w-full overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pl-5 "
       >
-        {[
-          {
-            name: "JavaScript",
-            url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-          },
-          {
-            name: "React",
-            url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-          },
-          {
-            name: "JavaScript",
-            url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-          },
-          {
-            name: "Node.js",
-            url: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-          },
-          {
-            name: "JavaScript",
-            url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-          },
-          {
-            name: "MongoDB",
-            url: "https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg",
-          },
-          {
-            name: "JavaScript",
-            url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-          },
-          {
-            name: "NestJS",
-            url: "https://docs.nestjs.com/assets/logo-small.svg",
-          },
-        ].map((_, index) => (
+        {technology.map((_, index) => (
           <div
             key={index}
             className={`snap-start   ${index === 0 ? "-ml-5" : ""}`}
