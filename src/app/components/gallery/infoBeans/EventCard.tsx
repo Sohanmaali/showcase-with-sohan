@@ -8,7 +8,7 @@ export default function Card({ image }: any) {
         width={400} // Increase width
         height={240} // Increase height
         alt="logo"
-        className="rounded-2xl w-full h-60 object-cover" // Change object-fill to object-cover
+        className="rounded-2xl w-full h-60 object-cover" 
       />
     </div>
   );

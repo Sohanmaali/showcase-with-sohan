@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://showcase-with-sohan.onrender.com/sitemap.xml

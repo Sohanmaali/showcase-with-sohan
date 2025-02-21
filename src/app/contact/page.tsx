@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contact/ContactForm";
 
 export default function Contact() {
   return (
@@ -9,14 +9,6 @@ export default function Contact() {
           <h1 className="text-3xl font-bold text-white">Contact</h1>
 
           <div className="my-2 mt-10 flex flex-wrap rounded-3xl shadow-lg h-lg ">
-            {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.40054122605!2d76.88450474085475!3d22.748308433127516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397d1f239bcfb471%3A0x5c3761e6edb78afe!2sDurga%20MANDIR!5e0!3m2!1sen!2sin!4v1739894481656!5m2!1sen!2sin"
-              width="100%"
-              className="border-0 rounded-3xl shadow-lg"
-              height="450"
-              allowFullScreen
-              loading="lazy"
-            ></iframe> */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.40054122605!2d76.88450474085475!3d22.748308433127516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397d1f239bcfb471%3A0x5c3761e6edb78afe!2sDurga%20MANDIR!5e0!3m2!1sen!2sin!4v1739894481656!5m2!1sen!2sin"
               className="border-0 rounded-3xl shadow-lg filter grayscale"

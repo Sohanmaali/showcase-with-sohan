@@ -6,7 +6,8 @@
     "dev": "next dev --port 3010 --turbopack",
     "build": "next build",
     "start": "next start -p 3010",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@nextui-org/date-picker": "^2.3.8",
@@ -17,6 +18,7 @@
     "js-cookie": "^3.0.5",
     "jwt-decode": "^4.0.0",
     "next": "^15.1.2",
+    "next-sitemap": "^4.2.3",
     "react": "^18.3.1",
     "react-datepicker": "^7.5.0",
     "react-dom": "^18.3.1",

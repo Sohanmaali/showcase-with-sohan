@@ -27,14 +27,28 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const pathname: any = usePathname();
   const config = pageConfig[pathname];
-  // useCopyProtect();
+  useCopyProtect();
 
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
       <head>
+        <meta
+          name="google-site-verification"
+          content="U21sRHG4ITrbC1LksUGmTS9Lel8RcAtWXcyrJYT4pdQ"
+        />
         <title>{config?.title || "Sohan"}</title>
-        <link rel="icon" href="/assets/images/emoji.png" />{" "}
+        <meta
+          name="description"
+          content="Welcome to Sohan's Portfolio. Discover my projects, resume, blog, and contact details."
+        />
+        <meta
+          name="keywords"
+          content="Portfolio, Web Developer, Projects, Resume, Blog, Contact"
+        />
+        <meta name="author" content="Sohan" />
+        <link rel="icon" href="/assets/images/emoji.png" />
       </head>
+
       <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center ">
         <div className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-no-repeat opacity-30"></div>
 

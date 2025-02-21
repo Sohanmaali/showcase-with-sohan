@@ -1,35 +1,50 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import TeacherCard from "./TeacherCard";
+import Image from "next/image";
 
-const teacherDetails = [
+const technology = [
   {
-    image: "/assets/teacher/vaibhav_sir.jpg",
-    name: "Vaibhav sir",
-    about:
-      "Amidst books, laughter, and endless dreams, Teachers' guidance,like a gentle stream. Their dedication, a beacon so bright,illuminates our futures shining light.",
+    name: "JavaScript",
+    url: "/assets/images/technology/javascript-horizontal.svg",
   },
   {
-    image: "/assets/teacher/pawan_sir.jpg",
-    name: "Pawan sir",
-    about:
-      "Under the mentorship of Pawan Sahu Sir, a Java expert, honed skills in Java programming with a meticulous and insightful approach. Pawan's commitment to excellence and expertise in navigating Java complexities contributed significantly to a deeper understanding of robust and scalable solutions.",
+    name: "Nextjs",
+    url: "/assets/images/technology/nextjs-2.svg",
   },
   {
-    image: "/assets/teacher/gourav_sir.jpg",
-    name: "Gourav sir",
-    about:
-      "Gourav Kothari Sir, my Frontend Technology trainer, is a masterful guide, blending expertise with passion to create a beautiful learning journey through the intricate world of web development. His teachings transform code into a harmonious masterpiece, making the complex dance of HTML, CSS, and JavaScript a captivating art form.",
+    name: "React",
+    url: "/assets/images/technology/logo-react.svg",
   },
   {
-    image: "/assets/teacher/ayush_sir.jpeg",
-    name: "Ayush Sir",
-    about:
-      "Managed by Ayush Rajput Sir, a seasoned and dynamic manager known for fostering a collaborative and goal-driven work environment. Under his leadership, gained valuable insights into project management, team coordination, and strategic decision-making. Ayush's mentorship has contributed to the development of effective problem-solving skills and a results-oriented mindset. His managerial guidance has been instrumental in achieving project milestones and maintaining a high standard of work efficiency.",
+    name: "Nest js",
+    url: "/assets/images/technology/NestJS-logo-wordmark.svg",
+  },
+  {
+    name: "hibernate",
+    url: "/assets/images/technology/hibernate-ar21.svg",
+  },
+  {
+    name: "java",
+    url: "/assets/images/technology/java-horizontal.svg",
+  },
+
+  {
+    name: "mysql",
+    url: "/assets/images/technology/mysql-horizontal.svg",
+  },
+  {
+    name: "JavaScript",
+    url: "/assets/images/technology/w3_css-ar21.svg",
+  },
+
+  {
+    name: "html",
+    url: "/assets/images/technology/w3_html5-ar21 (1).svg",
   },
 ];
 
-export default function TeacherTestimonials() {
+export default function TechnologyTestimonials() {
   const scrollRef: any = useRef(null);
   const trackRef: any = useRef(null);
   const thumbRef = useRef(null);
@@ -41,21 +56,25 @@ export default function TeacherTestimonials() {
       const { clientWidth, scrollWidth } = scrollRef.current;
       const trackWidth = trackRef.current.clientWidth;
 
+      // Calculate scrollbar thumb width (based on visible area)
       setThumbWidth((clientWidth / scrollWidth) * trackWidth);
     }
   }, []);
 
+  // Sync scrollbar with card container
   const handleScroll = () => {
     if (scrollRef.current && trackRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       const trackWidth = trackRef.current.clientWidth;
 
+      // Calculate new thumb position
       setThumbPosition(
         (scrollLeft / (scrollWidth - clientWidth)) * (trackWidth - thumbWidth)
       );
     }
   };
 
+  // Scroll card container when scrollbar is dragged
   const handleThumbDrag = (e: any) => {
     if (!scrollRef.current || !trackRef.current) return;
 
@@ -67,6 +86,7 @@ export default function TeacherTestimonials() {
 
     setThumbPosition(newThumbPos);
 
+    // Convert thumb position to scroll position
     const scrollLeft =
       (newThumbPos / (trackRef.current.clientWidth - thumbWidth)) *
       (scrollRef.current.scrollWidth - scrollRef.current.clientWidth);
@@ -76,21 +96,35 @@ export default function TeacherTestimonials() {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto py-2 ">
+      {/* Scrollable Cards */}
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex gap-10 w-full overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pl-5 "
+        className="flex  w-full overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pl-5 "
       >
-        {teacherDetails.map((teacher, index) => (
+        {technology.map((_, index) => (
           <div
             key={index}
-            className={`snap-start ${index === 0 ? "-ml-5" : ""}`}
+            className={`snap-start   ${index === 0 ? "-ml-5" : ""}`}
           >
-            <TeacherCard teacher={teacher} />
+            <div className="flex justify-center items-center h-40 px-4">
+              <div className="relative text-white rounded-2xl shadow-lg w-32 md:w-42">
+                <div className="mt-2 flex justify-center text-white">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={_.url}
+                    alt="Profile"
+                    className="w-24 h-24 object-contain filter invert"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
+      {/* Custom Scrollbar (50% width) */}
       <div
         ref={trackRef}
         className="relative md:w-1/2  mt-2 h-2 bg-gray-300 rounded-full mx-3 md:mx-auto"

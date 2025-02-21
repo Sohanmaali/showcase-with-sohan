@@ -1,6 +1,6 @@
 import React from "react";
-import EducationTimeline from "../components/EducationTimeline";
-import ExperienceTimeline from "../components/ExperienceTimeline";
+import EducationTimeline from "../components/resume/EducationTimeline";
+import ExperienceTimeline from "../components/resume/ExperienceTimeline";
 
 export default function page() {
   return (
