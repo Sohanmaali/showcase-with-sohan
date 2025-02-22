@@ -1,4 +1,5 @@
 import React from "react";
+import ProgramCard from "../components/code/ProgramCard";
 
 export default function Code() {
   return (
@@ -8,7 +9,7 @@ export default function Code() {
           <h1 className="text-3xl font-bold text-white">Code</h1>
           <div className="w-12 h-1 bg-yellow-500 my-2"></div>
           <div className="my-2 mt-10 flex flex-wrap gap-6 justify-center ">
-            dd
+            <ProgramCard />
           </div>
         </div>
       </div>
