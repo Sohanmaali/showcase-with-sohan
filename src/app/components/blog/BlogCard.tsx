@@ -16,7 +16,7 @@ export default function BlogCard({ blog }: any) {
           />
         </div>
         <div className="p-5">
-          <Link href="#">
+          <Link href={`blog/${1}`}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {blog?.heading}
             </h5>
@@ -24,11 +24,12 @@ export default function BlogCard({ blog }: any) {
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {blog?.details}
           </p>
-          <button className="relative h-10 shadow px-3 rounded-lg overflow-hidden transition-all duration-500 group border border-[#BCA358] bg-transparent hover:bg-gradient-to-bl from-[#BCA358] to-transparent">
-            <div className="relative flex items-center justify-center gap-2 text-[#BCA358] group-hover:text-white transition-colors duration-500">
-              <>Read More... </>
-            </div>
-          </button>
+          <Link
+            href={`blog/${1}`}
+            className="relative h-10 shadow p-3 mt-4 rounded-lg overflow-hidden transition-all duration-500 group border border-[#BCA358] bg-transparent hover:bg-gradient-to-bl from-[#BCA358] to-transparent"
+          >
+            <>Read More... </>
+          </Link>
         </div>
       </div>
     </>
