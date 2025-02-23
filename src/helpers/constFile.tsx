@@ -1,6 +1,46 @@
 export const programQuestions = [
   {
-    question: "Mark sheet",
+    type: "dir",
+    name: "Test folder one",
+    files: [
+      { name: "fileOne", solution: "Solution for fileOne in folderOne" },
+      { name: "fileTwo", solution: "Solution for fileTwo in folderOne" },
+    ],
+  },
+
+  {
+    type: "dir",
+    name: "Test folder two",
+    files: [
+      {
+        type: "dir",
+        name: "Test two inner folder",
+        files: [
+          { name: "fileOne", solution: "Solution for two inner folder file" },
+          {
+            name: "fileTwo",
+            solution: "Solution for two inner folder file second",
+          },
+        ],
+      },
+      { name: "fileOne", solution: "Solution for fileOne in folderOne" },
+      {
+        type: "dir",
+        name: "Test two inner folder",
+        files: [
+          { name: "fileOne", solution: "Solution for two inner folder file" },
+          {
+            name: "fileTwo",
+            solution: "Solution for two inner folder file second",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    type: "file",
+    name: "Mark sheet",
     solution: `import java.util.Scanner;
 
 class Marksheet{
@@ -1894,252 +1934,388 @@ class Marksheet{
 }`,
   },
   {
-    question: "Aadhar card",
+    type: "file",
+    name: "Aadhar card",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "Ayushman card",
+    type: "file",
+    name: "Ayushman card",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "Vaccinations card",
+    type: "file",
+    name: "Vaccinations card",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to add two int values",
+    type: "file",
+    name: "WAP to add two int values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to add two float values",
+    type: "dir",
+    name: "Test folder one",
+    files: [
+      { name: "fileOne", solution: "Solution for fileOne in folderOne" },
+      { name: "fileTwo", solution: "Solution for fileTwo in folderOne" },
+    ],
+  },
+  {
+    type: "file",
+    name: "WAP to add two float values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to add two double values",
+    type: "file",
+    name: "WAP to add two double values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to add two long values",
+    type: "file",
+    name: "WAP to add two long values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to subtraction two int values",
+    type: "file",
+    name: "WAP to subtraction two int values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to subtraction two float values",
+    type: "file",
+    name: "WAP to subtraction two float values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to subtraction two double values",
+    type: "file",
+    name: "WAP to subtraction two double values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to subtraction two long values",
+    type: "file",
+    name: "WAP to subtraction two long values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to multiplication two int values",
+    type: "file",
+    name: "WAP to multiplication two int values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to multiplication two float values",
+    type: "file",
+    name: "WAP to multiplication two float values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to multiplication two double values",
+    type: "file",
+    name: "WAP to multiplication two double values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to multiplication two long values",
+    type: "file",
+    name: "WAP to multiplication two long values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to division two int values",
+    type: "file",
+    name: "WAP to division two int values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to division two float values",
+    type: "file",
+    name: "WAP to division two float values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to division two double values",
+    type: "file",
+    name: "WAP to division two double values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to division two long values",
+    type: "file",
+    name: "WAP to division two long values",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find cube of a number",
+    type: "file",
+    name: "WAP to find cube of a number",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to calculate area of circle",
+    type: "file",
+    name: "WAP to calculate area of circle",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to calculate circumference of circle",
+    type: "file",
+    name: "WAP to calculate circumference of circle",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to calculate volume of cylinder",
+    type: "file",
+    name: "WAP to calculate volume of cylinder",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to check even or odd number",
+    type: "file",
+    name: "WAP to check even or odd number",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find greater among two numbers",
+    type: "file",
+    name: "WAP to find greater among two numbers",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to check eligible for voting or not",
+    type: "file",
+    name: "WAP to check eligible for voting or not",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to reverse a four-digit number",
+    type: "file",
+    name: "WAP to reverse a four-digit number",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to check if a year is a leap year",
+    type: "file",
+    name: "WAP to check if a year is a leap year",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to perform arithmetic operations (Calculator)",
+    type: "file",
+    name: "WAP to perform arithmetic operations (Calculator)",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print Hello World 10 times",
+    type: "file",
+    name: "WAP to print Hello World 10 times",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print Fibonacci series",
+    type: "file",
+    name: "WAP to print Fibonacci series",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to check a number is Armstrong or not",
+    type: "file",
+    name: "WAP to check a number is Armstrong or not",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print Pascal triangle",
+    type: "file",
+    name: "WAP to print Pascal triangle",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the factorial of a number",
+    type: "file",
+    name: "WAP to find the factorial of a number",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to generate a random number between 1 and 6",
+    type: "file",
+    name: "WAP to generate a random number between 1 and 6",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to sort an array using Bubble Sort",
+    type: "file",
+    name: "WAP to sort an array using Bubble Sort",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the maximum element in an array",
+    type: "file",
+    name: "WAP to find the maximum element in an array",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to transpose a matrix",
+    type: "file",
+    name: "WAP to transpose a matrix",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to add two matrices",
+    type: "file",
+    name: "WAP to add two matrices",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to multiply two matrices",
+    type: "file",
+    name: "WAP to multiply two matrices",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print a pattern of stars",
+    type: "file",
+    name: "WAP to print a pattern of stars",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to convert decimal to binary",
+    type: "file",
+    name: "WAP to convert decimal to binary",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to convert binary to decimal",
+    type: "file",
+    name: "WAP to convert binary to decimal",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find HCF of two numbers",
+    type: "file",
+    name: "WAP to find HCF of two numbers",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print the square series",
+    type: "file",
+    name: "WAP to print the square series",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print the table of a number",
+    type: "file",
+    name: "WAP to print the table of a number",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to check a number is prime or not",
+    type: "file",
+    name: "WAP to check a number is prime or not",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the missing number in an array",
+    type: "file",
+    name: "WAP to find the missing number in an array",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to rotate an array by N positions",
+    type: "file",
+    name: "WAP to rotate an array by N positions",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the largest subarray sum",
+    type: "file",
+    name: "WAP to find the largest subarray sum",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to move all zeroes to the end of an array",
+    type: "file",
+    name: "WAP to move all zeroes to the end of an array",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print a Floyd's triangle",
+    type: "file",
+    name: "WAP to print a Floyd's triangle",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to segregate even and odd elements in an array",
+    type: "file",
+    name: "WAP to segregate even and odd elements in an array",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print a number pyramid",
+    type: "file",
+    name: "WAP to print a number pyramid",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print a character pyramid",
+    type: "file",
+    name: "WAP to print a character pyramid",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the maximum product subarray",
+    type: "file",
+    name: "WAP to find the maximum product subarray",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the median of two sorted arrays",
+    type: "file",
+    name: "WAP to find the median of two sorted arrays",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print the diagonal elements of a matrix",
+    type: "file",
+    name: "WAP to print the diagonal elements of a matrix",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to find the sum of row and column elements of a matrix",
+    type: "file",
+    name: "WAP to find the sum of row and column elements of a matrix",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print Pascal's triangle",
+    type: "file",
+    name: "WAP to print Pascal's triangle",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question: "WAP to print all unique elements in an array",
+    type: "file",
+    name: "WAP to print all unique elements in an array",
     solution: "Answer will be available after some time 🙌",
   },
   {
-    question:
-      "WAP to rearrange an array such that even index elements are smaller and odd index elements are greater",
+    type: "file",
+    name: "WAP to rearrange an array such that even index elements are smaller and odd index elements are greater",
     solution: "Answer will be available after some time 🙌",
+  },
+];
+// ============================================================
+export const blogs = [
+  {
+    heading: "The Art of Coding: More Than Just Writing Code",
+    image:
+    "/assets/images/blog/coding.jpeg",
+    details:
+      "Coding is often perceived as a technical skill—one that requires logic, problem-solving, and an understanding of programming languages. However, coding is much more than simply writing lines of code. It is an art, a craft that involves creativity, structure, and design.",
+    description: `The Creative Aspect of Coding
+
+Many believe that coding is strictly analytical, but creativity plays a significant role in software development. Writing clean, efficient, and scalable code is like composing music or painting a masterpiece. A well-structured program not only works flawlessly but also has an elegance that experienced developers appreciate. Creativity comes into play when finding innovative solutions to complex problems or designing intuitive user interfaces.
+
+Problem-Solving and Logic
+
+At its core, coding is about solving problems. Whether you're developing a mobile application, a website, or an AI algorithm, each line of code serves a purpose. Developers must break down problems into smaller, manageable parts and create solutions that are both efficient and maintainable. Logical thinking and structured decision-making are key components of writing effective code.
+
+Writing Readable and Maintainable Code
+
+Good code is not just about functionality; it should be readable and maintainable. This means using meaningful variable names, adding comments where necessary, and following best practices in coding standards. Future developers (or even your future self) should be able to understand and modify the code with ease. Code that is well-organized reduces technical debt and makes long-term maintenance easier.
+
+The Continuous Learning Process
+
+Technology evolves rapidly, and so does coding. A good developer never stops learning. Whether it’s mastering a new programming language, keeping up with the latest frameworks, or understanding emerging trends like AI and blockchain, continuous improvement is essential. Engaging with the coding community, reading documentation, and experimenting with new technologies keep developers ahead in the game.
+
+Conclusion
+
+Coding is not just about writing instructions for computers; it is a blend of logic, creativity, and continuous learning. It is an art that requires patience, persistence, and a willingness to improve. Whether you are a beginner or an experienced developer, embracing the artistic side of coding can make you a better programmer and problem solver.
+
+`,
+  },
+  {
+    heading:
+      "The Role of Farmers (Kishan) in Agriculture: Backbone of the Nation",
+    image: "/assets/images/blog/kishan.jpeg",
+    details:
+      "Agriculture has been the foundation of human civilization for thousands of years. In India, where over half of the population is engaged in farming, Kishan (farmers) are considered the backbone of the nation. They play a crucial role in food production, economic development, and environmental sustainability.",
+    description: `The Importance of Farmers in Agriculture
+Farmers are responsible for producing the food that sustains billions of people. Their hard work ensures that we have grains, vegetables, fruits, dairy, and other essential products. Without farmers, there would be no food security, and economies would struggle to sustain themselves.
+
+1. Food Production and Supply
+Farmers cultivate land, grow crops, and raise livestock to provide food for the population. They use different farming techniques, such as organic farming, sustainable agriculture, and modern technology-based farming, to increase productivity.
+
+2. Contribution to the Economy
+Agriculture contributes significantly to the GDP of many countries, especially in developing nations like India. The farming sector provides employment opportunities to millions of people, from small-scale farmers to large agribusinesses.
+
+3. Environmental Sustainability
+Farmers play a key role in maintaining the balance of nature. Sustainable farming practices, such as crop rotation, organic fertilizers, and conservation techniques, help protect the soil, water, and biodiversity.
+
+Challenges Faced by Farmers
+Despite their immense contribution, farmers face several challenges:
+
+Climate Change: Unpredictable weather patterns, droughts, floods, and rising temperatures impact crop production.
+Debt and Financial Issues: Many farmers struggle with loans and lack financial support for modern farming techniques.
+Market Prices: Fluctuating market rates for crops make it difficult for farmers to earn stable incomes.
+Lack of Modern Technology: Small farmers often do not have access to advanced machinery, irrigation systems, and storage facilities.
+The Future of Farming
+With advancements in agritech, AI, and sustainable farming practices, the future of agriculture looks promising. Governments and organizations are working on initiatives such as:
+
+Organic and Sustainable Farming to reduce chemical usage.
+Smart Agriculture with AI-powered tools for better yield prediction.
+Financial Support and government schemes to help small-scale farmers.
+Conclusion
+Farmers (Kishan) are the lifeline of agriculture and a crucial part of the global economy. Supporting them with better policies, technology, and fair pricing can ensure a prosperous agricultural future. It’s time to recognize their efforts and work towards sustainable farming solutions.
+
+🚜 Salute to all the hardworking farmers who feed the world! 🌾`,
   },
 ];

@@ -48,10 +48,7 @@ export default function RootLayout({
         <meta name="author" content="Sohan" />
         <link rel="icon" href="/assets/images/emoji.png" />
       </head>
-
-      <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center ">
-        <div className="absolute inset-0 bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-no-repeat opacity-30"></div>
-
+      <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-fixed">
         <Provider store={store}>
           <Toaster />
           <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-10 main-body">
@@ -61,7 +58,7 @@ export default function RootLayout({
               </div>
 
               {/* Main Content */}
-              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 md:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10">
+              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 md:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10 ">
                 <Navbar />
                 {children}
               </div>
