@@ -1,5 +1,6 @@
 "use client"
 
+import { profileImage } from '@/helpers/constFile';
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
@@ -33,7 +34,7 @@ export default function Profile() {
     <>
       <div className="w-20 h-20 lg:w-40 lg:h-40 rounded-2xl bg-gradient-to-r from-[#383838] to-gray-900 overflow-hidden lg:mt-10">
               <Image
-                src="/assets/images/sohan.jpg"
+                src={profileImage}
                 alt="Sohan Maali"
                 width={130}
                 height={130}

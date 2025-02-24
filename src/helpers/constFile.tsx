@@ -1,3 +1,248 @@
+// =================================PROFILE SECTION=================================
+
+import {
+  IoCalendarOutline,
+  IoLocationOutline,
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoMailOutline,
+  IoPhonePortraitOutline,
+} from "react-icons/io5";
+
+export const profileImage = "/assets/images/sohan.jpg";
+
+export const contactDetails = [
+  {
+    icon: IoMailOutline,
+    label: "Email",
+    value: "sohanmaali144@gmail.com",
+    link: "mailto:sohanmaali4@gmail.com",
+  },
+  {
+    icon: IoPhonePortraitOutline,
+    label: "Phone",
+    value: "+91- 6232389832",
+    link: "tel:+916232389832",
+  },
+  { icon: IoCalendarOutline, label: "Birthday", value: "Oct 08, 2002" },
+  {
+    icon: IoLocationOutline,
+    label: "Location",
+    value: "Amla, Khategaon, Dewas",
+  },
+];
+
+export const socialLinks = [
+  { icon: IoLogoGithub, link: "https://github.com/Sohanmaali" },
+  {
+    icon: IoLogoLinkedin,
+    link: "https://www.linkedin.com/in/sohan-maali1/",
+  },
+  {
+    icon: IoLogoInstagram,
+    link: "https://www.instagram.com/sohan.maali1",
+  },
+];
+// =================================LEFT SIDE BAR END=================================
+
+// =================================NAVBAR SECTION=================================
+export const navLinks = [
+  "/",
+  "/resume",
+  "/project",
+  "/code",
+  "/gallery",
+  "/blog",
+  "/contact",
+];
+
+// =================================ABOUT PAGE=================================
+export const aboutDetails = [
+  "Hey there, I'm Sohan Maali, a MERN Stack Developer at Foduu. I have a passion for building scalable web applications and crafting seamless user experiences. My journey in development revolves around turning complex challenges into elegant, high-performing solutions.",
+  "With a keen interest in modern web technologies, I am constantly refining my skills, staying up to date with industry trends, and exploring innovative approaches to development. Beyond coding, I’m always eager to collaborate, learn, and contribute to projects that push the boundaries of web technology.",
+];
+
+export const expertiseCard = [
+  {
+    image:
+      "https://portfoliogallary.onrender.com/assets/images/icon-design.svg",
+    heading: "Full Stack Development",
+
+    description:
+      "I am a skilled MERN stack developer with experience in building robust web applications using MongoDB, Express.js, React.js, and Node.js. I specialize in API integration, server-side rendering, and database management.",
+  },
+  {
+    image:
+      "https://portfoliogallary.onrender.com/assets/images/icon-design.svg",
+    heading: "Java Development",
+    description:
+      "I am a skilled Java developer with experience in building applications using Java, Spring Boot, Hibernate, and RESTful APIs. I specialize in backend development, database management, and API integration.",
+  },
+  {
+    image:
+      "https://portfoliogallary.onrender.com/assets/images/icon-design.svg",
+    heading: "GitHub",
+    description:
+      "GitHub is essential for version control and collaboration. Its intuitive interface, pull requests, and issue tracking simplify development. Continuous integration ensures up-to-date code, making GitHub vital to my workflow.",
+  },
+  {
+    image:
+      "https://portfoliogallary.onrender.com/assets/images/icon-design.svg",
+    heading: "Open Source Contributor",
+    description:
+      "Open Source is the future. I contribute to open-source projects on weekends, learning from best practices while helping others and giving back to the community.",
+  },
+];
+
+export const teacherTestimonials = [
+  {
+    image: "/assets/teacher/vaibhav_sir.jpg",
+    name: "Vaibhav sir",
+    about:
+      "Amidst books, laughter, and endless dreams, Teachers' guidance,like a gentle stream. Their dedication, a beacon so bright,illuminates our futures shining light.",
+  },
+  {
+    image: "/assets/teacher/pawan_sir.jpg",
+    name: "Pawan sir",
+    about:
+      "Under the mentorship of Pawan Sahu Sir, a Java expert, honed skills in Java programming with a meticulous and insightful approach. Pawan's commitment to excellence and expertise in navigating Java complexities contributed significantly to a deeper understanding of robust and scalable solutions.",
+  },
+  {
+    image: "/assets/teacher/gourav_sir.jpg",
+    name: "Gourav sir",
+    about:
+      "Gourav Kothari Sir, my Frontend Technology trainer, is a masterful guide, blending expertise with passion to create a beautiful learning journey through the intricate world of web development. His teachings transform code into a harmonious masterpiece, making the complex dance of HTML, CSS, and JavaScript a captivating art form.",
+  },
+  {
+    image: "/assets/teacher/ayush_sir.jpeg",
+    name: "Ayush Sir",
+    about:
+      "Managed by Ayush Rajput Sir, a seasoned and dynamic manager known for fostering a collaborative and goal-driven work environment. Under his leadership, gained valuable insights into project management, team coordination, and strategic decision-making. Ayush's mentorship has contributed to the development of effective problem-solving skills and a results-oriented mindset. His managerial guidance has been instrumental in achieving project milestones and maintaining a high standard of work efficiency.",
+  },
+];
+
+export const technologyTestimonials = [
+  {
+    name: "JavaScript",
+    url: "/assets/images/technology/javascript-horizontal.svg",
+  },
+  {
+    name: "Nextjs",
+    url: "/assets/images/technology/nextjs-2.svg",
+  },
+  {
+    name: "React",
+    url: "/assets/images/technology/logo-react.svg",
+  },
+  {
+    name: "Nest js",
+    url: "/assets/images/technology/NestJS-logo-wordmark.svg",
+  },
+  {
+    name: "hibernate",
+    url: "/assets/images/technology/hibernate-ar21.svg",
+  },
+  {
+    name: "java",
+    url: "/assets/images/technology/java-horizontal.svg",
+  },
+
+  {
+    name: "mysql",
+    url: "/assets/images/technology/mysql-horizontal.svg",
+  },
+  {
+    name: "JavaScript",
+    url: "/assets/images/technology/w3_css-ar21.svg",
+  },
+
+  {
+    name: "html",
+    url: "/assets/images/technology/w3_html5-ar21 (1).svg",
+  },
+];
+
+// =================================RESUME PAGE=================================
+
+export const educationData = [
+  {
+    institution: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
+    link: "https://www.rgpv.ac.in/",
+    duration: "2023-2025",
+    description:
+      "Currently pursuing an MCA (Master of Computer Applications) at Patel College Of Science & Technology Indore. Demonstrated excellence in coursework related to software development, database management, algorithms, and computer networking.",
+  },
+  {
+    institution: "Barkatullah Vishwavidyalaya, Bhopal",
+    link: "http://www.bubhopal.ac.in/1068/Home",
+    duration: "2020-2023",
+    description:
+      "Completed a BCA (Bachelor of Computer Applications) from Harda Adarsh College. Gained expertise in programming, database management, software development, and computer networking.",
+  },
+  {
+    institution: "Govt High School Khategaon",
+    link: "https://schools.org.in/dewas/23230620403/govt-hss-excellence-khategaon.html",
+    duration: "2019-2020",
+    description:
+      "Completed 12th Grade with a specialization in the Science Stream, demonstrating a strong foundation in Mathematics and Sciences. Achieved 75% in the 12th-grade board examinations.",
+  },
+  {
+    institution: "Gaytri Vidya Mandir, Khategaon",
+    duration: "2017-2018",
+    description:
+      "Completed 10th Grade with a specialization in Computer Science, achieving 75% in the 10th-grade board examinations.",
+  },
+];
+
+export const experiences = [
+  {
+    company: "InfoBeans Foundation Indore",
+    link: "https://www.infobeans.com/infobeans-foundation/",
+    duration: "April 2023–June 2024",
+    description:
+      "Completed ITEP training at InfoBeans Foundation, Indore. Gained hands-on experience in software development, programming, and IT solutions, enhancing skills in web development, database management, and software engineering best practices.",
+  },
+  {
+    company: "FODUU - Web Design Company India",
+    link: "https://www.foduu.com/",
+    duration: "July 2024–Present",
+    description:
+      "Responsible for web design and development, contributing to various projects with expertise in front-end and back-end technologies.",
+  },
+];
+
+// =================================PROJECT PAGE =================================
+
+export const projectDetails = [
+  {
+    name: "carmucho",
+    details:
+      "Developed a user-friendly car booking platform with advanced search, filters, and location-based availability. Integrated a real-time chat system using Socket.IO with typing indicators, read receipts, and user-specific conversations. Implemented real-time notifications for bookings and messages. Built an admin dashboard to manage inventory, bookings, and customer interactions.",
+    technology: ["Nest", "Next", "MongoDB", "Nest", "Next", "MongoDB"],
+    image: "/assets/images/carmucho.png",
+    url: "https://carmucho.com/",
+  },
+  {
+    name: "scrapify",
+    details:
+      "Developed a full-stack MERN web application to streamline scrap material sales. Implemented user authentication and role-based access control for sellers and admins. Built a dynamic dashboard for managing listings, prices, and transactions. Integrated secure payments, optimized RESTful APIs, and enhanced UX with a responsive design and real-time notifications.",
+    technology: ["Nest", "Next", "MongoDB"],
+    image: "/assets/images/scrapify.png",
+    url: "https://scrapify-livb.onrender.com/",
+  },
+  {
+    name: "AOK",
+    details:
+      "Developed an online shop management system for efficient inventory, orders, and customer management. Implemented user authentication and role-based access for admins and staff. Integrated secure payment gateways and optimized RESTful APIs for seamless operations. Designed a responsive UI with real-time stock updates, order tracking, and automated notifications for users.",
+    technology: ["Nest", "React", "Mongodb"],
+    image: "/assets/images/aok.png",
+    url: "https://aok-ui.onrender.com",
+  },
+];
+
+// =================================CODE PAGE=================================
+
 export const programQuestions = [
   {
     type: "dir",
@@ -2252,12 +2497,135 @@ class Marksheet{
     solution: "Answer will be available after some time 🙌",
   },
 ];
-// ============================================================
+
+// =================================GALLERY PAGE=================================
+
+export const gallerySlider = [
+  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
+  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
+  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
+];
+
+export const oneYearjourney = [
+  {
+    step: 1,
+    title: "💡Embrace Lifelong Learning",
+    image: "/assets/images/sohan.jpg",
+    details:
+      "Stay curious and open to new ideas. Every challenge is an opportunity to grow. Keep learning, keep evolving, and never stop exploring new skills.",
+  },
+  {
+    step: 2,
+    title: "💬 Communicate with Clarity",
+    image: "/assets/images/sohan.jpg",
+    details:
+      "Listen actively and express yourself clearly. Meaningful conversations build trust and deepen relationships. Choose your words wisely and speak with intention.",
+  },
+  {
+    step: 3,
+    title: "🚀 Take Action, Not Just Plans",
+    image: "/assets/images/sohan.jpg",
+    details:
+      "Dreams remain dreams without action. Start small, stay consistent, and take deliberate steps toward your goals every day. Progress is built one step at a time.",
+  },
+];
+
+export const leftMarquee = [
+  "/assets/code/code_1.jpg",
+  "/assets/code/code_2.jpg",
+  "/assets/code/code_3.jpg",
+  "/assets/code/code_4.jpg",
+  "/assets/code/code_5.jpg",
+  "/assets/code/code_6.jpg",
+  "/assets/code/code_7.jpg",
+  "/assets/code/code_8.jpg",
+  "/assets/code/code_9.jpg",
+  "/assets/code/code_10.jpg",
+];
+
+export const rightMarquee = [
+  "/assets/code/code_1.jpg",
+  "/assets/code/code_2.jpg",
+  "/assets/code/code_3.jpg",
+  "/assets/code/code_4.jpg",
+  "/assets/code/code_5.jpg",
+  "/assets/code/code_6.jpg",
+  "/assets/code/code_7.jpg",
+  "/assets/code/code_8.jpg",
+  "/assets/code/code_9.jpg",
+  "/assets/code/code_10.jpg",
+];
+
+export const infoBeans = [
+  {
+    eventName: "Guru purnima",
+    images: [
+      "/assets/images/gurupurnima/g1.jpg",
+      "/assets/images/gurupurnima/g3.jpg",
+      "/assets/images/gurupurnima/g4.jpg",
+      "/assets/images/gurupurnima/g5.jpg",
+    ],
+  },
+  {
+    eventName: "Shree ganesh chaturthi",
+    images: [
+      "/assets/images/ganesh_chaturthi/ganeshji1.jpg",
+      "/assets/images/ganesh_chaturthi/ganeshji4.jpg",
+      "/assets/images/ganesh_chaturthi/gnaesh2.jpg",
+      "/assets/images/ganesh_chaturthi/rangloi2.jpg",
+    ],
+  },
+  {
+    eventName: "Birthday",
+    images: [
+      "/assets/images/Birthday/birt6.jpg",
+      "/assets/images/Birthday/birth-day1.jpg",
+      "/assets/images/Birthday/birth2.jpg",
+      "/assets/images/Birthday/birth6.jpg",
+    ],
+  },
+];
+
+export const foduuEvent = [
+  {
+    eventName: "Shree ganesh chaturthi",
+    images: [
+      "/assets/images/foduu/ganesh_chaturthi/IMG_20240907_204655_0905.jpg",
+      "/assets/images/foduu/ganesh_chaturthi/IMG_20240907_204657_0283.jpg",
+      "/assets/images/foduu/ganesh_chaturthi/IMG_20240907_204700_0080.jpg",
+      "/assets/images/foduu/ganesh_chaturthi/IMG_20240908_102603.jpg",
+      "/assets/images/foduu/ganesh_chaturthi/IMG_20240908_102619.jpg",
+    ],
+  },
+  {
+    eventName: "Dipawali",
+    images: [
+      "/assets/images/foduu/dipawali/1729874714606.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241026-WA0001.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241026-WA0005.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241026-WA0015.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241026-WA0019.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241026-WA0022.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241113-WA0005.jpg",
+      "/assets/images/foduu/dipawali/IMG-20241113-WA0007.jpg",
+    ],
+  },
+  {
+    eventName: "Birthday",
+    images: [
+      "/assets/images/foduu/barthday/IMG-20250207-WA0001.jpg",
+      "/assets/images/foduu/barthday/IMG-20250207-WA0019.jpg",
+      "/assets/images/foduu/barthday/IMG-20250207-WA0013.jpg",
+      "/assets/images/foduu/barthday/IMG-20250207-WA0035.jpg",
+    ],
+  },
+];
+
+// =================================BLOG SECTION=================================
 export const blogs = [
   {
     heading: "The Art of Coding: More Than Just Writing Code",
-    image:
-    "/assets/images/blog/coding.jpeg",
+    image: "/assets/images/blog/coding.jpeg",
     details:
       "Coding is often perceived as a technical skill—one that requires logic, problem-solving, and an understanding of programming languages. However, coding is much more than simply writing lines of code. It is an art, a craft that involves creativity, structure, and design.",
     description: `The Creative Aspect of Coding

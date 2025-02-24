@@ -1,34 +1,5 @@
+import { educationData } from "@/helpers/constFile";
 import Link from "next/link";
-
-const educationData = [
-  {
-    institution: "Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal",
-    link: "https://www.rgpv.ac.in/",
-    duration: "2023-2025",
-    description:
-      "Currently pursuing an MCA (Master of Computer Applications) at Patel College Of Science & Technology Indore. Demonstrated excellence in coursework related to software development, database management, algorithms, and computer networking.",
-  },
-  {
-    institution: "Barkatullah Vishwavidyalaya, Bhopal",
-    link: "http://www.bubhopal.ac.in/1068/Home",
-    duration: "2020-2023",
-    description:
-      "Completed a BCA (Bachelor of Computer Applications) from Harda Adarsh College. Gained expertise in programming, database management, software development, and computer networking.",
-  },
-  {
-    institution: "Govt High School Khategaon",
-    link: "https://schools.org.in/dewas/23230620403/govt-hss-excellence-khategaon.html",
-    duration: "2019-2020",
-    description:
-      "Completed 12th Grade with a specialization in the Science Stream, demonstrating a strong foundation in Mathematics and Sciences. Achieved 75% in the 12th-grade board examinations.",
-  },
-  {
-    institution: "Gaytri Vidya Mandir, Khategaon",
-    duration: "2017-2018",
-    description:
-      "Completed 10th Grade with a specialization in Computer Science, achieving 75% in the 10th-grade board examinations.",
-  },
-];
 
 export default function EducationTimeline() {
   return (

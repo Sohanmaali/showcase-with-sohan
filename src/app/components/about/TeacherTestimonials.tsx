@@ -1,34 +1,10 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import TeacherCard from "./TeacherCard";
+import { teacherTestimonials } from "@/helpers/constFile";
 // import TeacherCard from "./TeacherCard";
 
-const teacherDetails = [
-  {
-    image: "/assets/teacher/vaibhav_sir.jpg",
-    name: "Vaibhav sir",
-    about:
-      "Amidst books, laughter, and endless dreams, Teachers' guidance,like a gentle stream. Their dedication, a beacon so bright,illuminates our futures shining light.",
-  },
-  {
-    image: "/assets/teacher/pawan_sir.jpg",
-    name: "Pawan sir",
-    about:
-      "Under the mentorship of Pawan Sahu Sir, a Java expert, honed skills in Java programming with a meticulous and insightful approach. Pawan's commitment to excellence and expertise in navigating Java complexities contributed significantly to a deeper understanding of robust and scalable solutions.",
-  },
-  {
-    image: "/assets/teacher/gourav_sir.jpg",
-    name: "Gourav sir",
-    about:
-      "Gourav Kothari Sir, my Frontend Technology trainer, is a masterful guide, blending expertise with passion to create a beautiful learning journey through the intricate world of web development. His teachings transform code into a harmonious masterpiece, making the complex dance of HTML, CSS, and JavaScript a captivating art form.",
-  },
-  {
-    image: "/assets/teacher/ayush_sir.jpeg",
-    name: "Ayush Sir",
-    about:
-      "Managed by Ayush Rajput Sir, a seasoned and dynamic manager known for fostering a collaborative and goal-driven work environment. Under his leadership, gained valuable insights into project management, team coordination, and strategic decision-making. Ayush's mentorship has contributed to the development of effective problem-solving skills and a results-oriented mindset. His managerial guidance has been instrumental in achieving project milestones and maintaining a high standard of work efficiency.",
-  },
-];
+
 
 export default function TeacherTestimonials() {
   const scrollRef: any = useRef(null);
@@ -82,7 +58,7 @@ export default function TeacherTestimonials() {
         onScroll={handleScroll}
         className="flex w-full overflow-x-auto px-2 scrollbar-hide scroll-smooth snap-x snap-mandatory  gap-6"
       >
-        {teacherDetails.map((teacher, index) => (
+        {teacherTestimonials.map((teacher, index) => (
           <div
             key={index}
             className={`snap-start md:w-full  border-gray-200 rounded-lg  `}

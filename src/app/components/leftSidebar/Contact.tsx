@@ -1,32 +1,6 @@
+import { contactDetails } from "@/helpers/constFile";
 import Link from "next/link";
 import React from "react";
-import {
-  IoCalendarOutline,
-  IoLocationOutline,
-  IoMailOutline,
-  IoPhonePortraitOutline,
-} from "react-icons/io5";
-
-const contactDetails = [
-  {
-    icon: IoMailOutline,
-    label: "Email",
-    value: "sohanmaali144@gmail.com",
-    link: "mailto:sohanmaali4@gmail.com",
-  },
-  {
-    icon: IoPhonePortraitOutline,
-    label: "Phone",
-    value: "+91- 6232389832",
-    link: "tel:+916232389832",
-  },
-  { icon: IoCalendarOutline, label: "Birthday", value: "Oct 08, 2002" },
-  {
-    icon: IoLocationOutline,
-    label: "Location",
-    value: "Amla, Khategaon, Dewas",
-  },
-];
 
 export default function Contact() {
   return (

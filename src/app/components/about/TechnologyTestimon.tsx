@@ -2,47 +2,9 @@
 import { useRef, useState, useEffect } from "react";
 import TeacherCard from "./TeacherCard";
 import Image from "next/image";
+import { technologyTestimonials } from "@/helpers/constFile";
 
-const technology = [
-  {
-    name: "JavaScript",
-    url: "/assets/images/technology/javascript-horizontal.svg",
-  },
-  {
-    name: "Nextjs",
-    url: "/assets/images/technology/nextjs-2.svg",
-  },
-  {
-    name: "React",
-    url: "/assets/images/technology/logo-react.svg",
-  },
-  {
-    name: "Nest js",
-    url: "/assets/images/technology/NestJS-logo-wordmark.svg",
-  },
-  {
-    name: "hibernate",
-    url: "/assets/images/technology/hibernate-ar21.svg",
-  },
-  {
-    name: "java",
-    url: "/assets/images/technology/java-horizontal.svg",
-  },
 
-  {
-    name: "mysql",
-    url: "/assets/images/technology/mysql-horizontal.svg",
-  },
-  {
-    name: "JavaScript",
-    url: "/assets/images/technology/w3_css-ar21.svg",
-  },
-
-  {
-    name: "html",
-    url: "/assets/images/technology/w3_html5-ar21 (1).svg",
-  },
-];
 
 export default function TechnologyTestimonials() {
   const scrollRef: any = useRef(null);
@@ -102,7 +64,7 @@ export default function TechnologyTestimonials() {
         onScroll={handleScroll}
         className="flex  w-full overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pl-5 "
       >
-        {technology.map((_, index) => (
+        {technologyTestimonials.map((item, index) => (
           <div
             key={index}
             className={`snap-start   ${index === 0 ? "-ml-5" : ""}`}
@@ -113,7 +75,7 @@ export default function TechnologyTestimonials() {
                   <Image
                     width={100}
                     height={100}
-                    src={_.url}
+                    src={item.url}
                     alt="Profile"
                     className="w-24 h-24 object-contain filter invert"
                   />

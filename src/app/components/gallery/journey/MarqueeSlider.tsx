@@ -1,18 +1,6 @@
 "use client";
+import { leftMarquee, rightMarquee } from "@/helpers/constFile";
 import Image from "next/image";
-
-const images = [
-  "/assets/code/code_1.jpg",
-  "/assets/code/code_2.jpg",
-  "/assets/code/code_3.jpg",
-  "/assets/code/code_4.jpg",
-  "/assets/code/code_5.jpg",
-  "/assets/code/code_6.jpg",
-  "/assets/code/code_7.jpg",
-  "/assets/code/code_8.jpg",
-  "/assets/code/code_9.jpg",
-  "/assets/code/code_10.jpg",
-];
 
 const MarqueeSlider = () => {
   return (
@@ -20,7 +8,7 @@ const MarqueeSlider = () => {
       {/* First Marquee (Right to Left) */}
       <div className="relative w-full overflow-hidden skew-y-[-5deg]">
         <div className="flex gap-4 animate-marquee">
-          {[...images, ...images].map((src, index) => (
+          {[...leftMarquee, ...leftMarquee].map((src, index) => (
             <div key={index} className="w-60 shrink-0">
               <Image
                 src={src}
@@ -64,7 +52,7 @@ const MarqueeSlider = () => {
       {/* Second Marquee (Left to Right) */}
       <div className="relative w-full overflow-hidden mt-8 skew-y-[-5deg]">
         <div className="flex gap-4  animate-marquee-reverse">
-          {[...images, ...images].map((src, index) => (
+          {[...rightMarquee, ...rightMarquee].map((src, index) => (
             <div key={index} className="w-60 shrink-0">
               <Image
                 src={src}

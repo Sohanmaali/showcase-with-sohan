@@ -1,5 +1,6 @@
 "use client";
 
+import { sendMail } from "@/lib/send-mail";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { MdMessage, MdOutlineEmail, MdSend } from "react-icons/md";
@@ -55,17 +56,27 @@ const ContactForm = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    if (!ValidateData()) {
-      return;
-    }
+    // if (!ValidateData()) {
+    //   return;
+    // }
     setIsLoading(true);
 
     try {
+      const response = await sendMail({
+        email: "sohanmaali4@gmail.com",
+        sendTo: "sohanmaali4@gmail.com",
+        subject: "New Contact Inquiry Received",
+        templateName: "contact",
+        variables: formData,
+      });
+
+      console.log("response-=-=-=-=-", response);
+
       setTimeout(() => {
-        toast.success("Message Sent SuccessFully...");
+        toast.success("Message successfully send to sohan 😊");
       }, 2000);
     } catch (error) {
       console.error("Form Submit Error-=--", error);

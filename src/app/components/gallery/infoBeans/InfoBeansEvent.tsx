@@ -1,35 +1,8 @@
 import React from "react";
 import EventCard from "../EventCard";
+import { infoBeans } from "@/helpers/constFile";
 
-const infoBeans = [
-  {
-    eventName: "Guru purnima",
-    images: [
-      "/assets/images/gurupurnima/g1.jpg",
-      "/assets/images/gurupurnima/g3.jpg",
-      "/assets/images/gurupurnima/g4.jpg",
-      "/assets/images/gurupurnima/g5.jpg",
-    ],
-  },
-  {
-    eventName: "Shree ganesh chaturthi",
-    images: [
-      "/assets/images/ganesh_chaturthi/ganeshji1.jpg",
-      "/assets/images/ganesh_chaturthi/ganeshji4.jpg",
-      "/assets/images/ganesh_chaturthi/gnaesh2.jpg",
-      "/assets/images/ganesh_chaturthi/rangloi2.jpg",
-    ],
-  },
-  {
-    eventName: "Birthday",
-    images: [
-      "/assets/images/Birthday/birt6.jpg",
-      "/assets/images/Birthday/birth-day1.jpg",
-      "/assets/images/Birthday/birth2.jpg",
-      "/assets/images/Birthday/birth6.jpg",
-    ],
-  },
-];
+
 export default function InfoBeansEvent() {
   return (
     <>

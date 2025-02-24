@@ -6,14 +6,10 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { gallerySlider } from "@/helpers/constFile";
 
 export default function ImageSlider() {
-  const [sliderData, setSliderData] = useState([
-    "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-    "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-    "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
-  ]);
-  const swiperRef = useRef<any>(null); 
+  const swiperRef = useRef<any>(null);
   const prevRef = useRef<any>(null);
   const nextRef = useRef<any>(null);
 
@@ -28,7 +24,7 @@ export default function ImageSlider() {
         swiperInstance.navigation.update();
       }
     }
-  }, [sliderData]); 
+  }, [gallerySlider]);
 
   return (
     <div className="relative ">
@@ -66,8 +62,8 @@ export default function ImageSlider() {
           swiper.navigation.update();
         }}
       >
-        {sliderData.length > 0 &&
-          sliderData.map((slider: any, index: number) => (
+        {gallerySlider.length > 0 &&
+          gallerySlider.map((slider: any, index: number) => (
             <SwiperSlide key={index}>
               <div className=" ">
                 <img

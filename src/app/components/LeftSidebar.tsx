@@ -5,7 +5,7 @@ import Contact from "./leftSidebar/Contact";
 import Profile from "./leftSidebar/Profile";
 import SocialMedia from "./leftSidebar/SocialMedi";
 
-const Sidebar = () => {
+const LeftSidebar = () => {
   const [isActive, setIsActive] = useState(false);
 
   // Auto-detect screen size and update isActive
@@ -60,3 +60,5 @@ const Sidebar = () => {
     </aside>
   );
 };
+
+export default LeftSidebar;

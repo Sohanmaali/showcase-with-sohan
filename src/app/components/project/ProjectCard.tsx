@@ -1,3 +1,4 @@
+import { projectDetails } from "@/helpers/constFile";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,33 +10,6 @@ interface Project {
   image: string;
   url: string;
 }
-
-const projectDetails = [
-  {
-    name: "carmucho",
-    details:
-      "Developed a user-friendly car booking platform with advanced search, filters, and location-based availability. Integrated a real-time chat system using Socket.IO with typing indicators, read receipts, and user-specific conversations. Implemented real-time notifications for bookings and messages. Built an admin dashboard to manage inventory, bookings, and customer interactions.",
-    technology: ["Nest", "Next", "MongoDB", "Nest", "Next", "MongoDB"],
-    image: "/assets/images/carmucho.png",
-    url: "https://carmucho.com/",
-  },
-  {
-    name: "scrapify",
-    details:
-      "Developed a full-stack MERN web application to streamline scrap material sales. Implemented user authentication and role-based access control for sellers and admins. Built a dynamic dashboard for managing listings, prices, and transactions. Integrated secure payments, optimized RESTful APIs, and enhanced UX with a responsive design and real-time notifications.",
-    technology: ["Nest", "Next", "MongoDB"],
-    image: "/assets/images/scrapify.png",
-    url: "https://scrapify-livb.onrender.com/",
-  },
-  {
-    name: "AOK",
-    details:
-      "Developed an online shop management system for efficient inventory, orders, and customer management. Implemented user authentication and role-based access for admins and staff. Integrated secure payment gateways and optimized RESTful APIs for seamless operations. Designed a responsive UI with real-time stock updates, order tracking, and automated notifications for users.",
-    technology: ["Nest", "React", "Mongodb"],
-    image: "/assets/images/aok.png",
-    url: "https://aok-ui.onrender.com",
-  },
-];
 
 export default function ProjectCard() {
   return (
