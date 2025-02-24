@@ -34,7 +34,9 @@ export async function sendMail({
 
         // Load HBS template
         // const templatePath = path.join(process.cwd(), "./templates", `${templateName}.hbs`);
-        const templatePath = path.join(process.cwd(), "src/templates", `${templateName}.hbs`);
+        // const templatePath = path.join(process.cwd(), "src/templates", `${templateName}.hbs`);
+        const templatePath = path.resolve("src/templates", `${templateName}.hbs`);
+
 
         console.log("-=-===-templatePath-=-=-", templatePath);
 
@@ -57,7 +59,7 @@ export async function sendMail({
         console.log("Message sent: %s", info.messageId);
         return { success: true, message: "Email sent successfully!" };
     } catch (error) {
-        console.error("Error sending email:", error);
-        return { success: false, message: "Failed to send email", error };
+        throw error
+        // return { success: "error", message: "Failed to send email", error };
     }
 }

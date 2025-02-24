@@ -75,11 +75,9 @@ const ContactForm = () => {
 
       console.log("response-=-=-=-=-", response);
 
-      setTimeout(() => {
-        toast.success("Message successfully send to sohan 😊");
-      }, 2000);
+      toast.success("Message successfully send to sohan 😊");
     } catch (error) {
-      console.error("Form Submit Error-=--", error);
+      toast.error("Message Send fail to Sohan 😒");
     } finally {
       setIsLoading(false);
     }
