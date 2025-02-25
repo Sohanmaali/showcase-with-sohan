@@ -29,7 +29,7 @@ export async function sendMail({
         const html = contact(variables);
 
         let info = await transporter.sendMail({
-            from: `"Sohan PortFolio 🫡" <${process.env.MAIL_USER}>`,
+            from: `"Sohan PortFolio" <${process.env.MAIL_USER}>`,
             to: sendTo,
             subject: subject,
             text: `Hello ${variables.name}, Welcome to our platform!`,

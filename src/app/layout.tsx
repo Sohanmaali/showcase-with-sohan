@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
 // import Sidebar from "./components/LeftSidebar";
 import HomePage from "./page";
+import useCopyProtect from "@/hooks/useCopyProtect";
 
 const pageConfig: Record<string, { title: string }> = {
   "/": { title: "About Me" },
@@ -27,8 +28,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const pathname: any = usePathname();
-  const config = pageConfig[pathname];
-  // useCopyProtect();
+  const config: any = pageConfig[pathname];
 
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
@@ -40,7 +40,7 @@ export default function RootLayout({
         <title>{config?.title || "Sohan"}</title>
         <meta
           name="description"
-          content="Welcome to Sohan's Portfolio. Discover my projects, resume, blog, and contact details."
+          content="Welcome to Sohan's Portfolio. sohan maali Portfolio, sohan infobean, Discover my projects, resume, blog, and contact details."
         />
         <meta
           name="keywords"
@@ -58,7 +58,7 @@ export default function RootLayout({
                 <LeftSidebar />
               </div>
 
-              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 md:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10 ">
+              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 lg:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10 ">
                 <Navbar />
                 {children}
               </div>

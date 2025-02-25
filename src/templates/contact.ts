@@ -80,8 +80,7 @@ export function contact(variables: any) {
         <div class="content">
           <h2>You've Got a New Message!</h2>
   
-          <h2>Hey Sohan</h2>
-          ,<br />
+          <h2>Hey Sohan,</h2><br />
           A new contact inquiry has been submitted by
           <strong>${variables.name}</strong>. Please review the details below and take
           the necessary action.

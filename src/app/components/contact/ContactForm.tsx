@@ -108,6 +108,7 @@ const ContactForm = () => {
                 id="subject"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
+                value={formData?.subject}
                 onChange={handleChange}
               />
               <label
@@ -129,6 +130,7 @@ const ContactForm = () => {
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
+                value={formData?.name}
               />
               <label
                 htmlFor="name"
@@ -151,6 +153,7 @@ const ContactForm = () => {
                 id="email"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
+                value={formData?.email}
                 onChange={handleChange}
               />
               <label
@@ -168,9 +171,16 @@ const ContactForm = () => {
                 type="text"
                 name="mobile"
                 id="mobile"
+                value={formData?.mobile}
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
-                onChange={handleChange}
+                maxLength={10}
+                pattern="[0-9]*"
+                inputMode="numeric"
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, ""); 
+                  handleChange({ target: { name: "mobile", value } }); 
+                }}
               />
               <label
                 htmlFor="mobile"
@@ -191,6 +201,7 @@ const ContactForm = () => {
               <textarea
                 name="message"
                 id="message"
+                value={formData?.message}
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}

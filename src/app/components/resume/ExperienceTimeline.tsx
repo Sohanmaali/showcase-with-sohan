@@ -18,7 +18,7 @@ export default function ExperienceTimeline() {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
               {exp.duration}
             </time>
-            <p className="mb-4 text-base font-normal text-gray-500">
+            <p className="mb-4 text-base  text-gray-500 dark:text-gray-400 font-[Playfair Display]">
               {exp.description}
             </p>
           </li>

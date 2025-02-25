@@ -46,7 +46,7 @@ export default function ProjectCard() {
             {/* Project details are now revealed only when hovering over the detail section */}
             <div
               className="font-nunito block bg-[#282829] text-white font-light px-6 relative max-h-0 overflow-hidden leading-[1.2em] duration-500 
-    group-hover:max-h-[17em] transition-all pb-5"
+    group-hover:max-h-[15em] transition-all hover:pb-5"
             >
               <p>{project?.details}</p>
               <div className="flex justify-center items-center mt-2 h-fit w-fit gap-[0.5em] flex-wrap">

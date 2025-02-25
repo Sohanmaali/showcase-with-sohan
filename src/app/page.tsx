@@ -4,6 +4,7 @@ import ExpertiseCard from "./components/about/ExpertiseCard";
 import AboutMe from "./components/about/AboutMe";
 
 const HomePage = () => {
+  
   return (
     <div className="mb-4 md:mb-0">
       <div className="ps-6 pe-6 md:-mt-16 mt-2 mb-5">

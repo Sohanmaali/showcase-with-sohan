@@ -20,7 +20,7 @@ export default function EducationTimeline() {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               {edu.duration}
             </time>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 text-base  text-gray-500 dark:text-gray-400 font-[Playfair Display]">
               {edu.description}
             </p>
           </li>

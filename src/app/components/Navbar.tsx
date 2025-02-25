@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { navLinks } from "@/helpers/constFile";
 import Link from "next/link";
@@ -15,9 +15,11 @@ const Navbar = () => {
             <Link
               key={index}
               href={path}
-              className={`font-bold ${
-                pathname === path ? "text-yellow-400" : ""
-              }`}
+              className={`font-bold transition-all duration-300 border-b-2 border-transparent ${
+                pathname === path
+                  ? "text-yellow-400 border-yellow-400"
+                  : "text-white"
+              } hover:text-yellow-400 hover:border-white`}
             >
               {path === "/"
                 ? "About"
@@ -28,17 +30,16 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar (Bottom Navigation) */}
-
-      <nav className="sm:hidden fixed bottom-0 left-0 w-full bg- [#1a1a1a] backdrop-blur-sm  text-white py-10 rounded-tr-3xl rounded-tl-3xl z-20">
+      <nav className="sm:hidden fixed bottom-0 left-0 w-full bg-[#1a1a1a] backdrop-blur-sm text-white py-10 rounded-tr-3xl rounded-tl-3xl z-20">
         <div className="overflow-x-auto whitespace-nowrap px-3 scrollbar-hide">
-          <div className="flex justify-start space-x-6 w-max ">
+          <div className="flex justify-start space-x-6 w-max">
             {navLinks.map((path, index) => (
               <Link
                 key={index}
                 href={path}
-                className={`font-bold px-3 ${
-                  pathname === path ? "text-yellow-400" : ""
-                }`}
+                className={`font-bold px-3 transition-all duration-300 ${
+                  pathname === path ? "text-yellow-400" : "text-white"
+                } hover:text-yellow-400`}
               >
                 {path === "/"
                   ? "About"

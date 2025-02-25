@@ -36,6 +36,9 @@ export default {
         marquee: "marquee 30s linear infinite",
         'smooth-up-down': 'smoothUpDown 3s ease-in-out infinite',
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
