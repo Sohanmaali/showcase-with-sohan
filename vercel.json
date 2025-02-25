@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "sendMail": {
+        "includeFiles": "src/templates/*.hbs"
+      }
+    }
+  }
+  

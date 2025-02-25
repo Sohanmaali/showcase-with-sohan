@@ -1,23 +1,20 @@
 
 
 "use server";
-import fs from "fs";
-import path from "path";
-import handlebars from "handlebars";
+import { contact } from "@/templates/contact";
 import nodemailer from "nodemailer";
 
 export async function sendMail({
     email,
     sendTo,
-    subject,
     templateName,
+    subject,
     variables,
 }: {
     email: string;
     sendTo: string;
-    subject: string;
     templateName: string;
-    // variables: { [key: string]: string };
+    subject: string;
     variables: any;
 }) {
     try {
@@ -31,19 +28,8 @@ export async function sendMail({
             },
         });
 
-        // const templatePath = path.resolve(process.cwd(), "public", "templates", `${templateName}.hbs`);
-        const templatePath = path.resolve(process.cwd(), "src", "templates", `${templateName}.hbs`);
-        // const templatePath = path.resolve(process.cwd(), "src/templates/contact.hbs");
-
-        console.log("-=-=--templatePath-=--=", templatePath);
-
-        variables.Year = new Date().getFullYear();
-
-        const templateSource = fs.readFileSync(templatePath, "utf-8");
-
-        // Compile Handlebars template
-        const template = handlebars.compile(templateSource);
-        const html = template({ data: variables });
+        variables.year = new Date().getFullYear();
+        const html = contact(variables);
 
         let info = await transporter.sendMail({
             from: `${process.env.SENDER_NAME}`,
@@ -56,7 +42,7 @@ export async function sendMail({
         console.log("Message sent: %s", info.messageId);
         return { status: "success", message: "Email sent successfully!" };
     } catch (error) {
-        throw error
-        // return { success: "error", message: "Failed to send email", error };
+        console.error("Email sending error:", error);
+        return { status: "error", message: "Failed to send email", error };
     }
 }
