@@ -33,6 +33,7 @@ export async function sendMail({
 
         // const templatePath = path.join(process.cwd(), "public", "templates", `${templateName}.hbs`);
         const templatePath = path.join(process.cwd(), "src", "templates", `${templateName}.hbs`);
+        // const templatePath = path.resolve(process.cwd(), "src/templates/contact.hbs");
 
         console.log("-=-=--templatePath-=--=", templatePath);
 
