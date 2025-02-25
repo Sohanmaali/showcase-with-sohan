@@ -77,7 +77,8 @@ const ContactForm = () => {
 
       toast.success("Message successfully send to sohan 😊");
     } catch (error) {
-      toast.error("Message Send fail to Sohan 😒");
+      toast.error("Message Send fail to Sohan ");
+      // toast.error("Message Send fail to Sohan 😒");
     } finally {
       setIsLoading(false);
     }
