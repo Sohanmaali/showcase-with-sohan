@@ -1,5 +1,3 @@
-
-
 "use server";
 import { contact } from "@/templates/contact";
 import nodemailer from "nodemailer";

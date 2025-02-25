@@ -1,4 +1,4 @@
-export const contact = (variables: any) => {
+export function contact(variables: any) {
     return `
       <html lang="en">
     <head>

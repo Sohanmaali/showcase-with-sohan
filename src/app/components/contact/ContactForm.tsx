@@ -59,9 +59,9 @@ const ContactForm = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    // if (!ValidateData()) {
-    //   return;
-    // }
+    if (!ValidateData()) {
+      return;
+    }
     setIsLoading(true);
 
     try {
