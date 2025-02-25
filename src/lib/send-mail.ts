@@ -3,13 +3,12 @@ import { contact } from "@/templates/contact";
 import nodemailer from "nodemailer";
 
 export async function sendMail({
-    email,
+   
     sendTo,
     templateName,
     subject,
     variables,
 }: {
-    email: string;
     sendTo: string;
     templateName: string;
     subject: string;
@@ -30,14 +29,14 @@ export async function sendMail({
         const html = contact(variables);
 
         let info = await transporter.sendMail({
-            from: `${process.env.SENDER_NAME}`,
+            from: `"Sohan PortFolio 🫡" <${process.env.MAIL_USER}>`,
             to: sendTo,
             subject: subject,
             text: `Hello ${variables.name}, Welcome to our platform!`,
             html: html,
         });
 
-        console.log("Message sent: %s", info.messageId);
+        // console.log("Message sent: %s", info.messageId);
         return { status: "success", message: "Email sent successfully!" };
     } catch (error) {
         console.error("Email sending error:", error);
