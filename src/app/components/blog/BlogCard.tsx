@@ -32,6 +32,7 @@ export default function BlogCard({ blog }: any) {
           </Link>
         </div>
       </div>
+
       {/* Comment add  */}
     </>
   );
