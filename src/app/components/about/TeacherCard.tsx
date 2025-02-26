@@ -26,7 +26,7 @@ const TeacherCard = ({ teacher }: any) => {
           <div className="mt-2">
             <h2 className="text-lg font-bold text-center">{teacher?.name}</h2>
             <p className="text-gray-300 text-sm mt-1 line-clamp-2">
-              {teacher?.about}
+              {teacher?.about?.slice(0,100)} <span className="text-blue-500">Read More...</span>
             </p>
           </div>
         </div>

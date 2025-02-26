@@ -12,7 +12,7 @@ export default function FlipCard({ data }: any) {
               src={data.image}
               height={100}
               width={100}
-              className="h-40 w-40 rounded-full"
+              className="h-40 w-40 rounded-full object-cover"
               alt="image"
             />
             <div className="text-white mt-2">STEP {data.step}</div>

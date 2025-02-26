@@ -6,7 +6,7 @@ import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
 export default function SocialMedia() {
   return (
     <>
-      <div className="mb-5">
+      <div className="mb-2">
         <ul className="flex items-center gap-4 md:mb-5">
           {socialLinks.map(({ icon: Icon, link }, index) => (
             <li key={index}>

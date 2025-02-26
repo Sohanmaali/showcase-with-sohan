@@ -1,4 +1,3 @@
-
 // =================================PROFILE SECTION=================================
 
 import {
@@ -139,6 +138,14 @@ export const technologyTestimonials = [
   {
     name: "Nest js",
     url: "/assets/images/technology/NestJS-logo-wordmark.svg",
+  },
+  {
+    name: "Bootstrap",
+    url: "/assets/images/technology/Bootstrap_logo.svg",
+  },
+  {
+    name: "MongoDb",
+    url: "/assets/images/technology/MongoDBCompass.svg",
   },
   {
     name: "hibernate",
@@ -2502,23 +2509,23 @@ class Marksheet{
 // =================================GALLERY PAGE=================================
 
 export const gallerySlider = [
-  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider3.png",
-  "https://portfoliogallary.onrender.com/assets/gallary/slider/slider2.png",
-  "https://portfoliogallary.onrender.com/assets/gallary/slider/sliderimg1.jpg",
+  "/assets/images/slider/1.jpg",
+  "/assets/images/slider/2.jpg",
+  "/assets/images/slider/4.jpg",
 ];
 
 export const oneYearjourney = [
   {
     step: 1,
     title: "💡Embrace Lifelong Learning",
-    image: "/assets/images/sohan.jpg",
+    image: "/assets/images/sohan/1.jpg",
     details:
       "Stay curious and open to new ideas. Every challenge is an opportunity to grow. Keep learning, keep evolving, and never stop exploring new skills.",
   },
   {
     step: 2,
     title: "💬 Communicate with Clarity",
-    image: "/assets/images/sohan.jpg",
+    image: "/assets/images/sohan/2.jpg",
     details:
       "Listen actively and express yourself clearly. Meaningful conversations build trust and deepen relationships. Choose your words wisely and speak with intention.",
   },
@@ -2626,6 +2633,7 @@ export const foduuEvent = [
 export const blogs = [
   {
     heading: "The Art of Coding: More Than Just Writing Code",
+    slug: "the-art-of-coding-more-than-just-writing-code",
     image: "/assets/images/blog/coding.jpeg",
     details:
       "Coding is often perceived as a technical skill—one that requires logic, problem-solving, and an understanding of programming languages. However, coding is much more than simply writing lines of code. It is an art, a craft that involves creativity, structure, and design.",
@@ -2654,6 +2662,7 @@ Coding is not just about writing instructions for computers; it is a blend of lo
   {
     heading:
       "The Role of Farmers (Kishan) in Agriculture: Backbone of the Nation",
+    slug: "the-role-of-farmers-kishan-in-agriculture-backbone-of-the-nation",
     image: "/assets/images/blog/kishan.jpeg",
     details:
       "Agriculture has been the foundation of human civilization for thousands of years. In India, where over half of the population is engaged in farming, Kishan (farmers) are considered the backbone of the nation. They play a crucial role in food production, economic development, and environmental sustainability.",

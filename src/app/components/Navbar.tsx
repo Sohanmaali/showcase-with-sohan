@@ -9,17 +9,15 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden sm:block w-1.5/2 ml-auto px-12 py-8 bg-[#282829] text-white rounded-bl-3xl rounded-tr-3xl">
+      <nav className="hidden sm:block w-1.5/2 ml-auto px-12 py-8 bg-[#282829] text-white shadow-lg rounded-bl-3xl rounded-tr-3xl transition-all duration-300">
         <div className="flex gap-8 justify-end">
           {navLinks.map((path, index) => (
             <Link
               key={index}
               href={path}
               className={`font-bold transition-all duration-300 border-b-2 border-transparent ${
-                pathname === path
-                  ? "text-yellow-400 border-yellow-400"
-                  : "text-white"
-              } hover:text-yellow-400 hover:border-white`}
+                pathname === path ? "text-yellow-400 " : "text-white"
+              } hover:text-yellow-400 `}
             >
               {path === "/"
                 ? "About"
@@ -37,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 href={path}
-                className={`font-bold px-3 transition-all duration-300 ${
+                className={`font-bold px-3 transition-all duration-300  ${
                   pathname === path ? "text-yellow-400" : "text-white"
                 } hover:text-yellow-400`}
               >

@@ -16,7 +16,9 @@ export default function BlogCard({ blog }: any) {
           />
         </div>
         <div className="p-5">
-          <Link href={`blog/${1}`}>
+          <Link
+            href={`/blog/${blog.slug}`}
+          >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {blog?.heading}
             </h5>
@@ -25,8 +27,8 @@ export default function BlogCard({ blog }: any) {
             {blog?.details}
           </p>
           <Link
-            href={`blog/${1}`}
-            className="relative h-10 shadow p-3 mt-4 rounded-lg overflow-hidden transition-all duration-500 group border border-[#BCA358] bg-transparent hover:bg-gradient-to-bl from-[#BCA358] to-transparent"
+            href={`/blog/${blog.slug}`}
+            className="relative h-10 shadow p-3 mt-10  rounded-lg overflow-hidden transition-all duration-500 group border border-[#BCA358] bg-transparent hover:bg-gradient-to-bl from-[#BCA358] to-transparent"
           >
             <>Read More... </>
           </Link>

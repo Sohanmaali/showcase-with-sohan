@@ -28,6 +28,9 @@ const ContactForm = () => {
     if (!formData.subject?.trim()) {
       err.subject = "Subject is required";
       isValid = false;
+    } else if (formData.subject?.trim().length <= 4) {
+      err.subject = "Max Subject Length 5";
+      isValid = false;
     }
 
     if (!formData.email?.trim()) {
@@ -48,6 +51,9 @@ const ContactForm = () => {
 
     if (!formData.message?.trim()) {
       err.message = "Message is required";
+      isValid = false;
+    } else if (formData.message?.trim().length <= 4) {
+      err.message = "Max Message Length 10";
       isValid = false;
     }
 
@@ -178,8 +184,8 @@ const ContactForm = () => {
                 pattern="[0-9]*"
                 inputMode="numeric"
                 onChange={(e) => {
-                  const value = e.target.value.replace(/\D/g, ""); 
-                  handleChange({ target: { name: "mobile", value } }); 
+                  const value = e.target.value.replace(/\D/g, "");
+                  handleChange({ target: { name: "mobile", value } });
                 }}
               />
               <label

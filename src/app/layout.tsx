@@ -10,8 +10,6 @@ import { Toaster } from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
-// import Sidebar from "./components/LeftSidebar";
-import HomePage from "./page";
 import useCopyProtect from "@/hooks/useCopyProtect";
 
 const pageConfig: Record<string, { title: string }> = {
@@ -40,7 +38,7 @@ export default function RootLayout({
         <title>{config?.title || "Sohan"}</title>
         <meta
           name="description"
-          content="Welcome to Sohan's Portfolio. sohan maali Portfolio, sohan infobean, Discover my projects, resume, blog, and contact details."
+          content="Welcome to Sohan's Portfolio. sohan maali Portfolio sohan infobean, Discover my projects, resume, blog, and contact details."
         />
         <meta
           name="keywords"
@@ -52,7 +50,7 @@ export default function RootLayout({
       <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-fixed">
         <Provider store={store}>
           <Toaster />
-          <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-10 main-body">
+          <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-1 main-body">
             <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 h-full">
               <div className="lg:col-span-3 w-full ">
                 <LeftSidebar />

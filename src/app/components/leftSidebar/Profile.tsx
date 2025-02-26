@@ -32,7 +32,7 @@ export default function Profile() {
       }, [charIndex, isDeleting, wordIndex, words]);
   return (
     <>
-      <div className="w-20 h-20 lg:w-40 lg:h-40 rounded-2xl bg-gradient-to-r from-[#383838] to-gray-900 overflow-hidden lg:mt-10">
+      <div className="w-20 h-20 lg:w-40 lg:h-40 rounded-2xl bg-gradient-to-r from-[#383838] to-gray-900 overflow-hidden lg:mt-6">
               <Image
                 src={profileImage}
                 alt="Sohan Maali"
