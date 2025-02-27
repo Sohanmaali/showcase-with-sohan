@@ -1,10 +1,8 @@
 "use client"
 import React from "react";
 import { aboutDetails } from "@/helpers/constFile";
-import useCopyProtect from "@/hooks/useCopyProtect";
 
 export default function AboutMe() {
-  useCopyProtect();
   return (
     <div className="md:mx-4 my-2 font-[Inconsolata]">
       {aboutDetails.map((detail, index) => (

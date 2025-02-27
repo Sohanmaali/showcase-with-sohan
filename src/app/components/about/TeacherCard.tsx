@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Modal from "./TeacherModal";
+import TeacherModal from "./TeacherModal";
 import { useState } from "react";
 
 const TeacherCard = ({ teacher }: any) => {
@@ -9,10 +9,11 @@ const TeacherCard = ({ teacher }: any) => {
   return (
     <>
       <div
-        className="flex justify-center items-center h-44 px-3  cursor-pointer"
+        className="flex justify-center items-center h-44 px-3  "
+        >
+        <div className="relative bg-[#222224] text-white p-6 rounded-2xl shadow-lg w-80 md:w-[27rem] border border-[#EAB308] cursor-pointer"
         onClick={() => setIsModalOpen(teacher)}
-      >
-        <div className="relative bg-[#222224] text-white p-6 rounded-2xl shadow-lg w-80 md:w-[27rem]">
+        >
           {/* Profile Image */}
           <div className="absolute -top-6 ">
             <img
@@ -31,7 +32,7 @@ const TeacherCard = ({ teacher }: any) => {
           </div>
         </div>
 
-        <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+        <TeacherModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
       </div>
     </>
   );

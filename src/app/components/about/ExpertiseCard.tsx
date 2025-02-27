@@ -1,11 +1,10 @@
 "use client";
 import { expertiseCard } from "@/helpers/constFile";
-import useCopyProtect from "@/hooks/useCopyProtect";
 import Image from "next/image";
 import React from "react";
 
 export default function ExpertiseCard() {
-  useCopyProtect();
+  
   return (
     <>
       {expertiseCard.map((item, index) => (

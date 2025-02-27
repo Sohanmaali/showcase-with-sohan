@@ -18,12 +18,6 @@ const ProgramCard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  const customStyle = {
-    background: "#1E1E1E", // Change this to your preferred background color
-    padding: "1rem",
-    borderRadius: "0.375rem",
-  };
-
   const totalPages = Math.ceil(programQuestions.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, programQuestions.length);
@@ -52,15 +46,15 @@ const ProgramCard = () => {
       if (item.type === "dir") {
         return (
           <div key={itemKey} className="mb-2">
-            <div
-              className="flex items-center justify-between p-3 mt-2 bg-gray-800 rounded-md "
-              
-            >
-              <span className="font-semibold text-yellow-400 cursor-pointer" onClick={() => toggleFolder(itemKey)}>
+            <div className="flex items-center justify-between p-3 mt-2 bg-gray-800 rounded-md ">
+              <span
+                className="font-semibold text-yellow-400 cursor-pointer"
+                onClick={() => toggleFolder(itemKey)}
+              >
                 📁 {item.name}
               </span>
               <IoIosArrowDropdown
-              onClick={() => toggleFolder(itemKey)}
+                onClick={() => toggleFolder(itemKey)}
                 className={`text-xl transform transition-transform cursor-pointer duration-300 ease-in-out ${
                   openFolders[itemKey] ? "rotate-180" : ""
                 }`}
@@ -172,9 +166,11 @@ const ProgramCard = () => {
               }`}
             >
               <SyntaxHighlighter
-                language="java" // Change this to match your code language
-                style={{ ...dracula, hljs: { ...dracula.hljs, background: "#282829" } }} // Apply custom background
-   
+                language="Javascript" // Change this to match your code language
+                style={{
+                  ...dracula,
+                  hljs: { ...dracula.hljs, background: "#282829" },
+                }} // Apply custom background
                 // wrapLongLines
                 showLineNumbers
                 className="p-3 rounded-br-md  rounded-bl-md max-h-96 overflow-y-auto scrollbar-hide"

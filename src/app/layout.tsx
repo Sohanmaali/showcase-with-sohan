@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
 import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
-import useCopyProtect from "@/hooks/useCopyProtect";
+import { DisableInspect } from "@/helpers/HelperFunction";
 
 const pageConfig: Record<string, { title: string }> = {
   "/": { title: "About Me" },
@@ -27,6 +27,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const pathname: any = usePathname();
   const config: any = pageConfig[pathname];
+  // DisableInspect();
 
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
@@ -47,7 +48,7 @@ export default function RootLayout({
         <meta name="author" content="Sohan" />
         <link rel="icon" href="/assets/images/emoji.png" />
       </head>
-      <body className="relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-fixed">
+      <body className="select-none relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-fixed">
         <Provider store={store}>
           <Toaster />
           <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-1 main-body">

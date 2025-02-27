@@ -49,12 +49,11 @@ export default function ProjectCard() {
     group-hover:max-h-[15em] transition-all hover:pb-5"
             >
               <p>{project?.details}</p>
-              <div className="flex justify-center items-center mt-2 h-fit w-fit gap-[0.5em] flex-wrap">
-                {project?.technology.map((category: string, index: number) => (
+              <div className="flex flex-row mb-3  justify-start items-center mt-2 h-fit w-full max-w-full gap-2 overflow-x-auto scrollbar-hide">
+                {project?.technology?.map((category: string, index: number) => (
                   <div
                     key={index}
-                    className="p-1 w-24 text-center rounded-[0.5em] text-white text-[1em] font-normal 
-          group-hover:bg-[#1A1A1A] group-hover:text-white duration-300"
+                    className="p-2 min-w-[6rem]  border  border-[#EAB308] text-center rounded-lg bg-gray-800 text-white text-sm font-medium transition-all duration-300 hover:bg-[#1A1A1A]"
                   >
                     <p>{category}</p>
                   </div>

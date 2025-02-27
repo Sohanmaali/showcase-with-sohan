@@ -141,7 +141,7 @@ export default function ImageSlider() {
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-60 object-fit rounded-md"
+              className="w-full h-60 md:h-80 object-fit rounded-md"
               loading="lazy"
             />
           </SwiperSlide>

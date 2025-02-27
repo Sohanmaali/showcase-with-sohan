@@ -1,8 +1,8 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import TeacherCard from "./TeacherCard";
 import Image from "next/image";
 import { technologyTestimonials } from "@/helpers/constFile";
+import Link from "next/link";
 
 
 
@@ -71,14 +71,16 @@ export default function TechnologyTestimonials() {
           >
             <div className="flex justify-center items-center h-40 px-4">
               <div className="relative text-white rounded-2xl shadow-lg w-32 md:w-42">
-                <div className="mt-2 flex justify-center text-white">
-                  <Image
+                <div className="mt-2 flex justify-center text-white border border-[#EAB308] rounded-2xl">
+                 <Link href={item?.link}>
+                 <Image
                     width={100}
                     height={100}
                     src={item.url}
                     alt="Profile"
                     className="w-24 h-24 object-contain filter invert"
                   />
+                 </Link>
                 </div>
               </div>
             </div>

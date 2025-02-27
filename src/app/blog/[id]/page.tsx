@@ -24,7 +24,7 @@ export default function page() {
           <div className="my-2 mt-10 flex flex-wrap gap-6 justify-center">
             <div className="md:ps-4 md:pe-4 pe-0 ps-0 rounded w-full">
               <div className="grid grid-cols-1  gap-4 justify-center">
-                <pre className="whitespace-pre-wrap">{blog?.description}</pre>
+                <p className="whitespace-pre-wrap" dangerouslySetInnerHTML={{__html:blog?.description}}></p>
               </div>
             </div>
           </div>

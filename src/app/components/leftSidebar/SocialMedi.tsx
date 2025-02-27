@@ -1,7 +1,7 @@
-import { socialLinks } from "@/helpers/constFile";
+import { socialLinks, resumeLink } from "@/helpers/constFile";
+import Link from "next/link";
 import React from "react";
-import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
-
+import { GrDownload } from "react-icons/gr";
 
 export default function SocialMedia() {
   return (
@@ -10,14 +10,24 @@ export default function SocialMedia() {
         <ul className="flex items-center gap-4 md:mb-5">
           {socialLinks.map(({ icon: Icon, link }, index) => (
             <li key={index}>
-              <a
+              <Link
                 href={link}
                 className="text-gray-400 hover:text-white text-2xl transition"
               >
                 <Icon />
-              </a>
+              </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href={resumeLink}
+              download
+              target="_blank"
+              className="text-gray-400 hover:text-white text-2xl transition"
+            >
+              <GrDownload />
+            </Link>
+          </li>
         </ul>
       </div>
     </>

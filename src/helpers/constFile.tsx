@@ -12,6 +12,8 @@ import {
 
 export const profileImage = "/assets/images/sohan.jpg";
 
+export const typingWords = ["Web Developer", "Software Developer"];
+
 export const contactDetails = [
   {
     icon: IoMailOutline,
@@ -44,6 +46,8 @@ export const socialLinks = [
     link: "https://www.instagram.com/sohan.maali1",
   },
 ];
+
+export const resumeLink = "/assets/file/Sohan_Maali_Resume.pdf";
 // =================================LEFT SIDE BAR END=================================
 
 // =================================NAVBAR SECTION=================================
@@ -125,48 +129,59 @@ export const teacherTestimonials = [
 export const technologyTestimonials = [
   {
     name: "JavaScript",
+    link: "",
     url: "/assets/images/technology/javascript-horizontal.svg",
   },
   {
     name: "Nextjs",
+    link: "",
     url: "/assets/images/technology/nextjs-2.svg",
   },
   {
     name: "React",
+    link: "",
     url: "/assets/images/technology/logo-react.svg",
   },
   {
     name: "Nest js",
+    link: "",
     url: "/assets/images/technology/NestJS-logo-wordmark.svg",
   },
   {
     name: "Bootstrap",
+    link: "",
     url: "/assets/images/technology/Bootstrap_logo.svg",
   },
   {
     name: "MongoDb",
+    link: "",
     url: "/assets/images/technology/MongoDBCompass.svg",
   },
   {
     name: "hibernate",
+    link: "",
     url: "/assets/images/technology/hibernate-ar21.svg",
   },
   {
     name: "java",
+    link: "",
     url: "/assets/images/technology/java-horizontal.svg",
   },
 
   {
     name: "mysql",
+    link: "",
     url: "/assets/images/technology/mysql-horizontal.svg",
   },
   {
     name: "JavaScript",
+    link: "",
     url: "/assets/images/technology/w3_css-ar21.svg",
   },
 
   {
     name: "html",
+    link: "",
     url: "/assets/images/technology/w3_html5-ar21 (1).svg",
   },
 ];
@@ -227,7 +242,7 @@ export const projectDetails = [
     name: "carmucho",
     details:
       "Developed a user-friendly car booking platform with advanced search, filters, and location-based availability. Integrated a real-time chat system using Socket.IO with typing indicators, read receipts, and user-specific conversations. Implemented real-time notifications for bookings and messages. Built an admin dashboard to manage inventory, bookings, and customer interactions.",
-    technology: ["Nest", "Next", "MongoDB", "Nest", "Next", "MongoDB"],
+    technology: ["Nest", "Next", "MongoDB", "Socket.io", "Bootstrap", "Typescript", "Redis", "MongoDB"],
     image: "/assets/images/carmucho.png",
     url: "https://carmucho.com/",
   },
@@ -235,7 +250,7 @@ export const projectDetails = [
     name: "scrapify",
     details:
       "Developed a full-stack MERN web application to streamline scrap material sales. Implemented user authentication and role-based access control for sellers and admins. Built a dynamic dashboard for managing listings, prices, and transactions. Integrated secure payments, optimized RESTful APIs, and enhanced UX with a responsive design and real-time notifications.",
-    technology: ["Nest", "Next", "MongoDB"],
+    technology: ["Nest", "Next", "MongoDB","Typescript", "Tailwind css" ],
     image: "/assets/images/scrapify.png",
     url: "https://scrapify-livb.onrender.com/",
   },
@@ -243,7 +258,7 @@ export const projectDetails = [
     name: "AOK",
     details:
       "Developed an online shop management system for efficient inventory, orders, and customer management. Implemented user authentication and role-based access for admins and staff. Integrated secure payment gateways and optimized RESTful APIs for seamless operations. Designed a responsive UI with real-time stock updates, order tracking, and automated notifications for users.",
-    technology: ["Nest", "React", "Mongodb"],
+    technology: ["Nest", "React", "Mongodb","Typescript","JavaScript" ],
     image: "/assets/images/aok.png",
     url: "https://aok-ui.onrender.com",
   },
@@ -2186,293 +2201,88 @@ class Marksheet{
   }
 }`,
   },
+
   {
     type: "file",
-    name: "Aadhar card",
-    solution: "Answer will be available after some time 🙌",
+    name: "Code For Disable Inspect Mode",
+    solution: `export  function DisableInspect() {
+      useEffect(() => {
+        
+        const handleContextMenu = (e: any) => e.preventDefault();
+    
+        const handleKeyDown = (e: any) => {
+          if (
+            e.keyCode === 123 || // F12
+            (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || // Ctrl+Shift+I/J/C
+            (e.ctrlKey && e.keyCode === 85) // Ctrl+U
+          ) {
+            e.preventDefault();
+          }
+        };
+    
+        document.addEventListener("contextmenu", handleContextMenu);
+        document.addEventListener("keydown", handleKeyDown);
+    
+        return () => {
+          document.removeEventListener("contextmenu", handleContextMenu);
+          document.removeEventListener("keydown", handleKeyDown);
+        };
+      }, []);
+    
+      return <div>Inspect Mode Disabled</div>;
+    }`,
   },
   {
     type: "file",
-    name: "Ayushman card",
-    solution: "Answer will be available after some time 🙌",
+    name: "Copy Text on Clipboard",
+    solution: `export const copyToClipboard = (text: string) => {
+  if (typeof window !== "undefined" && navigator.clipboard) {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success("Copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  } else if (typeof document !== "undefined") {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand("copy");
+      toast.success("Copied to clipboard!");
+    } catch (err) {
+      console.error("Fallback: Copy failed", err);
+    }
+    document.body.removeChild(textArea);
+  } else {
+    console.error("Clipboard API not available");
+  }
+};`,
   },
   {
     type: "file",
-    name: "Vaccinations card",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to add two int values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "dir",
-    name: "Test folder one",
-    files: [
-      { name: "fileOne", solution: "Solution for fileOne in folderOne" },
-      { name: "fileTwo", solution: "Solution for fileTwo in folderOne" },
-    ],
-  },
-  {
-    type: "file",
-    name: "WAP to add two float values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to add two double values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to add two long values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to subtraction two int values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to subtraction two float values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to subtraction two double values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to subtraction two long values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to multiplication two int values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to multiplication two float values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to multiplication two double values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to multiplication two long values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to division two int values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to division two float values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to division two double values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to division two long values",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find cube of a number",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to calculate area of circle",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to calculate circumference of circle",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to calculate volume of cylinder",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to check even or odd number",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find greater among two numbers",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to check eligible for voting or not",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to reverse a four-digit number",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to check if a year is a leap year",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to perform arithmetic operations (Calculator)",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print Hello World 10 times",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print Fibonacci series",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to check a number is Armstrong or not",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print Pascal triangle",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find the factorial of a number",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to generate a random number between 1 and 6",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to sort an array using Bubble Sort",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find the maximum element in an array",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to transpose a matrix",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to add two matrices",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to multiply two matrices",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print a pattern of stars",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to convert decimal to binary",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to convert binary to decimal",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find HCF of two numbers",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print the square series",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print the table of a number",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to check a number is prime or not",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find the missing number in an array",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to rotate an array by N positions",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find the largest subarray sum",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to move all zeroes to the end of an array",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print a Floyd's triangle",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to segregate even and odd elements in an array",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print a number pyramid",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to print a character pyramid",
-    solution: "Answer will be available after some time 🙌",
-  },
-  {
-    type: "file",
-    name: "WAP to find the maximum product subarray",
-    solution: "Answer will be available after some time 🙌",
+    name: "Disable original text copy on clipboard",
+    solution: `export const useCopyProtect = () => {
+      useEffect(() => {
+        const handleCopy = (event: any) => {
+          event.preventDefault();
+          event.clipboardData.setData(
+            "text/plain",
+            "NAA! Beta Mera content churane ki koshish mat kariyo!! 😜😜"
+          );
+        };
+    
+        document.addEventListener("copy", handleCopy);
+    
+        return () => {
+          document.removeEventListener("copy", handleCopy);
+        };
+      }, []);
+    };
+    `,
   },
   {
     type: "file",
@@ -2637,26 +2447,19 @@ export const blogs = [
     image: "/assets/images/blog/coding.jpeg",
     details:
       "Coding is often perceived as a technical skill—one that requires logic, problem-solving, and an understanding of programming languages. However, coding is much more than simply writing lines of code. It is an art, a craft that involves creativity, structure, and design.",
-    description: `The Creative Aspect of Coding
-
-Many believe that coding is strictly analytical, but creativity plays a significant role in software development. Writing clean, efficient, and scalable code is like composing music or painting a masterpiece. A well-structured program not only works flawlessly but also has an elegance that experienced developers appreciate. Creativity comes into play when finding innovative solutions to complex problems or designing intuitive user interfaces.
-
-Problem-Solving and Logic
-
-At its core, coding is about solving problems. Whether you're developing a mobile application, a website, or an AI algorithm, each line of code serves a purpose. Developers must break down problems into smaller, manageable parts and create solutions that are both efficient and maintainable. Logical thinking and structured decision-making are key components of writing effective code.
-
-Writing Readable and Maintainable Code
-
-Good code is not just about functionality; it should be readable and maintainable. This means using meaningful variable names, adding comments where necessary, and following best practices in coding standards. Future developers (or even your future self) should be able to understand and modify the code with ease. Code that is well-organized reduces technical debt and makes long-term maintenance easier.
-
-The Continuous Learning Process
-
-Technology evolves rapidly, and so does coding. A good developer never stops learning. Whether it’s mastering a new programming language, keeping up with the latest frameworks, or understanding emerging trends like AI and blockchain, continuous improvement is essential. Engaging with the coding community, reading documentation, and experimenting with new technologies keep developers ahead in the game.
-
-Conclusion
-
-Coding is not just about writing instructions for computers; it is a blend of logic, creativity, and continuous learning. It is an art that requires patience, persistence, and a willingness to improve. Whether you are a beginner or an experienced developer, embracing the artistic side of coding can make you a better programmer and problem solver.
-
+    description: `<h1>The Creative Aspect of Coding</h1>
+    <p>Many believe that coding is strictly analytical, but creativity plays a significant role in software development. Writing clean, efficient, and scalable code is like composing music or painting a masterpiece. A well-structured program not only works flawlessly but also has an elegance that experienced developers appreciate. Creativity comes into play when finding innovative solutions to complex problems or designing intuitive user interfaces.</p>    
+    <h2>Problem-Solving and Logic</h2>
+    <p>At its core, coding is about solving problems. Whether you're developing a mobile application, a website, or an AI algorithm, each line of code serves a purpose. Developers must break down problems into smaller, manageable parts and create solutions that are both efficient and maintainable. Logical thinking and structured decision-making are key components of writing effective code.</p>
+    
+    <h2>Writing Readable and Maintainable Code</h2>
+    <p>Good code is not just about functionality; it should be readable and maintainable. This means using meaningful variable names, adding comments where necessary, and following best practices in coding standards. Future developers (or even your future self) should be able to understand and modify the code with ease. Code that is well-organized reduces technical debt and makes long-term maintenance easier.</p>
+    
+    <h2>The Continuous Learning Process</h2>
+    <p>Technology evolves rapidly, and so does coding. A good developer never stops learning. Whether it’s mastering a new programming language, keeping up with the latest frameworks, or understanding emerging trends like AI and blockchain, continuous improvement is essential. Engaging with the coding community, reading documentation, and experimenting with new technologies keep developers ahead in the game.</p>
+    
+    <h2>Conclusion</h2>
+    <p>Coding is not just about writing instructions for computers; it is a blend of logic, creativity, and continuous learning. It is an art that requires patience, persistence, and a willingness to improve. Whether you are a beginner or an experienced developer, embracing the artistic side of coding can make you a better programmer and problem solver.</p>
 `,
   },
   {
