@@ -29,7 +29,7 @@ const ContactForm = () => {
       err.subject = "Subject is required";
       isValid = false;
     } else if (formData.subject?.trim().length <= 4) {
-      err.subject = "Max Subject Length 5";
+      err.subject = "Subject must be at least 5 characters long";
       isValid = false;
     }
 
@@ -53,7 +53,7 @@ const ContactForm = () => {
       err.message = "Message is required";
       isValid = false;
     } else if (formData.message?.trim().length <= 4) {
-      err.message = "Max Message Length 10";
+      err.message = "Message must be at least 10 characters long";
       isValid = false;
     }
 

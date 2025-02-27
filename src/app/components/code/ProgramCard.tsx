@@ -106,7 +106,7 @@ const ProgramCard = () => {
                         `${item.name}`
                       );
                     }}
-                    className="transition-transform duration-200 hover:scale-110"
+                    className="transition-transform duration-200 hover:scale-110 cursor-pointer"
                   />
                   <div
                     className={`absolute bottom-full left-1/2 transform -translate-x-1/2 pointer-events-none mb-2 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg min-w-max max-w-xs transition-all duration-200 ease-in-out ${
@@ -129,7 +129,7 @@ const ProgramCard = () => {
                       e.stopPropagation();
                       copyToClipboard(`${item.name}\n${item.solution}`);
                     }}
-                    className="transition-transform duration-200 hover:scale-110"
+                    className="transition-transform duration-200 hover:scale-110 cursor-pointer"
                   />
                   <div
                     className={`absolute bottom-full left-1/2 transform -translate-x-1/2 pointer-events-none mb-2 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-lg min-w-max max-w-xs transition-all duration-200 ease-in-out ${
