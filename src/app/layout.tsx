@@ -11,6 +11,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Navbar from "./components/Navbar";
 import LeftSidebar from "./components/LeftSidebar";
 import { DisableInspect } from "@/helpers/HelperFunction";
+import { Suspense } from "react";
 
 const pageConfig: Record<string, { title: string }> = {
   "/": { title: "About Me" },
@@ -51,18 +52,20 @@ export default function RootLayout({
       <body className="select-none relative antialiased overflow-x-hidden text-white bg-[#121212] bg-[url('/assets/images/bg.jpg')] bg-cover bg-repeat bg-center bg-fixed">
         <Provider store={store}>
           <Toaster />
-          <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-1 main-body">
-            <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 h-full">
-              <div className="lg:col-span-3 w-full ">
-                <LeftSidebar />
-              </div>
+          <Suspense fallback={<p className="text-center">Loading...</p>}>
+            <div className="relative w-full min-h-screen p-2 max-w-screen-xl mx-auto lg:mt-1 main-body">
+              <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-6 h-full">
+                <div className="lg:col-span-3 w-full ">
+                  <LeftSidebar />
+                </div>
 
-              <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 lg:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10 ">
-                <Navbar />
-                {children}
+                <div className="lg:col-span-9 bg-[#1E1E1F] mt-5 lg:mt-0 rounded-3xl shadow-lg w-full mb-28 md:mb-0 relative z-10 ">
+                  <Navbar />
+                  {children}
+                </div>
               </div>
             </div>
-          </div>
+          </Suspense>
         </Provider>
       </body>
     </html>
