@@ -27,7 +27,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const pathname: any = usePathname();
   const config: any = pageConfig[pathname];
-  // DisableInspect();
+  DisableInspect();
 
   return (
     <html lang="en" className="overflow-x-hidden bg-[#121212]">
