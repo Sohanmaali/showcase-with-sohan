@@ -2,16 +2,23 @@
 import { useState, useEffect } from "react";
 import ProgramCard from "./ProgramCard";
 import Repositories from "./Repositories";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const CodeTabs = () => {
-  const [activeTab, setActiveTab] = useState(() => {
-    return localStorage.getItem("activeTab") || "CODE";
-  });
+  const router = useRouter();
+  const searchParams: any = useSearchParams();
+  const tabFromUrl = searchParams.get("tab");
 
-  // Update localStorage when the tab changes
+  // Default tab is "JOURNEY" if not found in URL
+  const [activeTab, setActiveTab] = useState(tabFromUrl || "CODE");
+
   useEffect(() => {
-    localStorage.setItem("activeTab", activeTab);
-  }, [activeTab]);
+    if (tabFromUrl !== activeTab) {
+      const params = new URLSearchParams();
+      params.set("tab", activeTab);
+      router.push(`?${params.toString()}`, { scroll: false });
+    }
+  }, [activeTab, tabFromUrl, router]);
 
   return (
     <>

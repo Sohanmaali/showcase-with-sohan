@@ -6,15 +6,22 @@ import OneYearJourney from "./journey/OneYearJourney";
 import InfoBeansEvent from "./infoBeans/InfoBeansEvent";
 import FoduuEvent from "./work/FoduuEvent";
 
+import { useRouter, useSearchParams } from "next/navigation";
 const GalleryTabs = () => {
-  const [galleryTab, setActiveTab] = useState(() => {
-    return localStorage.getItem("galleryTab") || "JOURNEY";
-  });
+  const router = useRouter();
+  const searchParams: any = useSearchParams();
+  const tabFromUrl = searchParams.get("tab");
 
-  // Update localStorage when the tab changes
+  // Default tab is "JOURNEY" if not found in URL
+  const [galleryTab, setActiveTab] = useState(tabFromUrl || "JOURNEY");
+
   useEffect(() => {
-    localStorage.setItem("galleryTab", galleryTab);
-  }, [galleryTab]);
+    if (tabFromUrl !== galleryTab) {
+      const params = new URLSearchParams();
+      params.set("tab", galleryTab);
+      router.push(`?${params.toString()}`, { scroll: false });
+    }
+  }, [galleryTab, tabFromUrl, router]);
 
   return (
     <>
