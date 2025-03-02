@@ -24,7 +24,7 @@ export const contactDetails = [
   {
     icon: IoPhonePortraitOutline,
     label: "Phone",
-    value: "+91- 6232389832",
+    value: "+91 - 6232389832",
     link: "tel:+916232389832",
   },
   { icon: IoCalendarOutline, label: "Birthday", value: "Oct 08, 2002" },
@@ -242,7 +242,16 @@ export const projectDetails = [
     name: "carmucho",
     details:
       "Developed a user-friendly car booking platform with advanced search, filters, and location-based availability. Integrated a real-time chat system using Socket.IO with typing indicators, read receipts, and user-specific conversations. Implemented real-time notifications for bookings and messages. Built an admin dashboard to manage inventory, bookings, and customer interactions.",
-    technology: ["Nest", "Next", "MongoDB", "Socket.io", "Bootstrap", "Typescript", "Redis", "MongoDB"],
+    technology: [
+      "Nest",
+      "Next",
+      "MongoDB",
+      "Socket.io",
+      "Bootstrap",
+      "Typescript",
+      "Redis",
+      "MongoDB",
+    ],
     image: "/assets/images/carmucho.png",
     url: "https://carmucho.com/",
   },
@@ -250,7 +259,7 @@ export const projectDetails = [
     name: "scrapify",
     details:
       "Developed a full-stack MERN web application to streamline scrap material sales. Implemented user authentication and role-based access control for sellers and admins. Built a dynamic dashboard for managing listings, prices, and transactions. Integrated secure payments, optimized RESTful APIs, and enhanced UX with a responsive design and real-time notifications.",
-    technology: ["Nest", "Next", "MongoDB","Typescript", "Tailwind css" ],
+    technology: ["Nest", "Next", "MongoDB", "Typescript", "Tailwind css"],
     image: "/assets/images/scrapify.png",
     url: "https://scrapify-livb.onrender.com/",
   },
@@ -258,7 +267,7 @@ export const projectDetails = [
     name: "AOK",
     details:
       "Developed an online shop management system for efficient inventory, orders, and customer management. Implemented user authentication and role-based access for admins and staff. Integrated secure payment gateways and optimized RESTful APIs for seamless operations. Designed a responsive UI with real-time stock updates, order tracking, and automated notifications for users.",
-    technology: ["Nest", "React", "Mongodb","Typescript","JavaScript" ],
+    technology: ["Nest", "React", "Mongodb", "Typescript", "JavaScript"],
     image: "/assets/images/aok.png",
     url: "https://aok-ui.onrender.com",
   },
@@ -2313,6 +2322,24 @@ class Marksheet{
     type: "file",
     name: "WAP to rearrange an array such that even index elements are smaller and odd index elements are greater",
     solution: "Answer will be available after some time 🙌",
+  },
+];
+
+export const repositories = [
+  {
+    type: "repo",
+    name: "Interview Preparation",
+    url: "https://github.com/Sohanmaali/Interview-Preparation",
+  },
+  {
+    type: "repo",
+    name: "Java Program Practice",
+    url: "https://github.com/Sohanmaali/Java-Program-Practice",
+  },
+  {
+    type: "repo",
+    name: "Nest JS Authentication",
+    url: "https://github.com/Sohanmaali/Nest-Authentication",
   },
 ];
 

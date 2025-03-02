@@ -1,5 +1,3 @@
-// "use client";
-
 import { navLinks } from "@/helpers/constFile";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,7 +15,7 @@ const Navbar = () => {
               href={path}
               className={`font-bold transition-all duration-300 border-b-2 border-transparent ${
                 pathname === path ? "text-yellow-400 " : "text-white"
-              } hover:text-yellow-400 `}
+              } hover:text-green-400 `}
             >
               {path === "/"
                 ? "About"

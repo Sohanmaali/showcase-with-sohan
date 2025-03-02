@@ -9,7 +9,6 @@ export default function Contact() {
           <div className="ps-6 pe-6 md:-mt-16 mt-4 mb-5">
             <h1 className="text-3xl font-bold text-white">Contact</h1>
             <div className="w-12 h-1 bg-yellow-500 my-2"></div>
-            {/* <div className="my-2 mt-10 flex flex-wrap gap-6 justify-center "> */}
             <div className="my-2 mt-10 flex flex-wrap rounded-3xl shadow-lg h-lg ">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.40054122605!2d76.88450474085475!3d22.748308433127516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397d1f239bcfb471%3A0x5c3761e6edb78afe!2sDurga%20MANDIR!5e0!3m2!1sen!2sin!4v1739894481656!5m2!1sen!2sin"
@@ -26,7 +25,6 @@ export default function Contact() {
               </div>
               <ContactForm />
             </div>
-            {/* </div> */}
           </div>
         </div>
       </div>
