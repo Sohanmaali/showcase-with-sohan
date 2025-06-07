@@ -6,8 +6,7 @@
     "dev": "next dev --port 3010 --turbopack",
     "build": "next build",
     "start": "next start -p 3010",
-    "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/date-picker": "^2.3.8",
