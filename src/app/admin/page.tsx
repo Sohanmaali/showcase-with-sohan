@@ -1,0 +1,12 @@
+"use client"
+import React, { useEffect } from 'react'
+
+export default function page() {
+
+  // useEffect(() => {
+  //   localStorage.setItem("role", "admin");
+  // })
+  return (
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur error nesciunt accusantium. Illum, adipisci doloremque? Corrupti vero velit laboriosam unde enim ea eum voluptate tempora accusamus consequuntur iure mollitia impedit cupiditate sed temporibus facilis eaque ipsam, exercitationem aliquid nesciunt? Illum, aut eum ratione placeat fuga nobis optio? Quisquam aspernatur quaerat earum dicta illum, a quis molestias cupiditate. Iure officia praesentium dicta quis tenetur consequuntur minus velit soluta nam consequatur, quas labore voluptatibus blanditiis, et eaque voluptas vitae, nisi ducimus ab architecto quidem. Facere aliquid corporis totam possimus cupiditate assumenda. Ducimus, voluptatem aut, perspiciatis esse cupiditate excepturi libero non eos ipsa unde iure ut? Officiis in omnis, unde, nemo porro eligendi labore assumenda minus explicabo illo, numquam dolorem quis minima enim quas excepturi corrupti quam! Dolorum quibusdam facere alias rem id molestiae ut rerum doloremque assumenda? Accusantium dolores atque aliquid id exercitationem laborum sapiente vel natus necessitatibus possimus! Odit quas cum perferendis tempore doloremque maiores, mollitia, in nemo sunt assumenda perspiciatis! Pariatur voluptatibus earum sed, eius expedita quia quo sit, autem, quam ipsam mollitia? Odio porro minima corrupti, tenetur maxime laborum aliquam non officiis velit ipsam quam magni dolores, neque nobis voluptatum architecto impedit dignissimos reprehenderit. Ut quaerat architecto ex veniam hic cum dolorum aliquam ad, eaque ipsum iusto. Porro doloribus vitae ex recusandae nulla cumque neque! Nulla, libero cum non dicta ad iste earum dolorum possimus quod perspiciatis labore explicabo doloremque vel temporibus? Voluptate minus voluptatum quam ea ab omnis laboriosam modi doloremque, maiores sequi tempore nostrum enim animi nulla necessitatibus vero dolorum? Beatae error, ipsam non aliquam perferendis distinctio, sed eum ab dignissimos labore velit dolor sit provident porro aperiam ratione corporis quod, doloribus dicta harum. Autem facilis doloribus rem est temporibus, repellat cupiditate, explicabo repellendus sed reiciendis fuga ut ex obcaecati. Accusamus, doloremque sequi! Autem, neque fugiat!</div>
+  )
+}
