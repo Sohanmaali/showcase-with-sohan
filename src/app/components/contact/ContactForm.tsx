@@ -1,5 +1,6 @@
 "use client";
 
+import { sendMail } from "@/lib/send-mail";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { MdMessage, MdOutlineEmail, MdSend } from "react-icons/md";
@@ -12,6 +13,7 @@ const ContactForm = () => {
     mobile: "",
     message: "",
   });
+
   const [errors, setErrors] = useState<any>({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -55,7 +57,7 @@ const ContactForm = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     if (!ValidateData()) {
@@ -64,22 +66,42 @@ const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      setTimeout(() => {
-        toast.success("Message Sent SuccessFully...");
-      }, 2000);
+      const response = await sendMail({
+        sendTo: "sohanmaali4@gmail.com",
+        subject: "New Contact Inquiry Received",
+        variables: formData,
+      });
+
+      // console.log("response-=-=-=-=-", response);
+
+      toast.success("Message successfully send to sohan 😊");
     } catch (error) {
-      console.error("Form Submit Error-=--", error);
+      // toast.error("Message Send fail to Sohan ");
+      toast.error("Message Send fail to Sohan 😒");
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+
+    if (type === "file") {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (file) {
+        setFormData((prevState) => ({
+          ...prevState,
+          [name]: file, // store File object
+        }));
+      }
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
 
     setErrors((prev: any) => ({ ...prev, [name]: "" }));
   };
@@ -94,7 +116,7 @@ const ContactForm = () => {
                 type="text"
                 name="subject"
                 id="subject"
-                className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
               />
@@ -109,13 +131,12 @@ const ContactForm = () => {
               )}
             </div>
 
-
             <div className="relative z-0 w-full mb-5 group ">
               <input
                 type="text"
                 name="name"
                 id="name"
-                className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
               />
@@ -138,7 +159,7 @@ const ContactForm = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
               />
@@ -157,7 +178,7 @@ const ContactForm = () => {
                 type="text"
                 name="mobile"
                 id="mobile"
-                className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
               />
@@ -175,12 +196,36 @@ const ContactForm = () => {
         </div>
 
         <div className="row">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className="relative z-0 w-full mb-5 group">
+              <input
+                type="file"
+                name="file"
+                id="file"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                placeholder=" "
+                onChange={handleChange}
+              />
+              <label
+                htmlFor="file"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#BCA358] peer-focus:dark:text-[#BCA358] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Email Address
+              </label>
+              {errors?.email && (
+                <span className="text-white-900">{errors?.email} </span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
           <div className="grid grid-cols-1  gap-6">
             <div className="relative z-0 w-full mb-5 group">
               <textarea
                 name="message"
                 id="message"
-                className="block py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-[#BCA358] focus:outline-none focus:ring-0 focus:border-[#BCA358] peer"
                 placeholder=" "
                 onChange={handleChange}
               ></textarea>

@@ -112,7 +112,7 @@ export const expertiseCard = [
   {
     image:
       "https://portfoliogallary.onrender.com/assets/images/icon-design.svg",
-    heading: "Full Stack Development",
+    heading: "Mern Stack Development",
 
     description:
       "I am a skilled MERN stack developer with experience in building robust web applications using MongoDB, Express.js, React.js, and Node.js. I specialize in API integration, server-side rendering, and database management.",

@@ -52,7 +52,7 @@ export default function TeacherTestimonials() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto py-2 ">
+    <div className="relative w-full max-w-6xl mx-auto py-2 ">
       <div
         ref={scrollRef}
         onScroll={handleScroll}

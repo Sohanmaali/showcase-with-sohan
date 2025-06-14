@@ -4,6 +4,7 @@ import ContactForm from "../components/contact/ContactForm";
 export default function Contact() {
   return (
     <>
+    
       <div>
         <div className="mb-4 md:mb-0">
           <div className="ps-2 pe-2 md:-mt-16 mt-4 mb-5">
