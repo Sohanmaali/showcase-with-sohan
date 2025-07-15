@@ -60,12 +60,12 @@ export default async function handler(req, res) {
       //   pass: "zufDrdVZ2F7FQPr7Bs", // Use App Password for Gmail
       // },
 
-       host: process.env.MAIL_HOST,
-      port: Number(process.env.MAIL_PORT),
-      secure: process.env.MAIL_SECURE === "true",
+       host: "smtp.ethereal.email",
+      port: 587,
+      secure: false,
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: "marilyne97@ethereal.email",
+        pass: "zufDrdVZ2F7FQPr7Bs",
       },
     });
 
