@@ -23,18 +23,18 @@ export const contactDetails = [
     value: "sohanmaali144@gmail.com",
     link: "mailto:sohanmaali4@gmail.com",
   },
-  {
-    icon: IoPhonePortraitOutline,
-    label: "Phone",
-    value: "+91 - 6232389832",
-    link: "tel:+916232389832",
-  },
-  { icon: IoCalendarOutline, label: "Birthday", value: "Oct 08, 2002" },
-  {
-    icon: IoLocationOutline,
-    label: "Location",
-    value: "Amla, Khategaon, Dewas",
-  },
+  // {
+  //   icon: IoPhonePortraitOutline,
+  //   label: "Phone",
+  //   value: "+91 - 6232389832",
+  //   link: "tel:+916232389832",
+  // },
+  // { icon: IoCalendarOutline, label: "Birthday", value: "Oct 08, 2002" },
+  // {
+  //   icon: IoLocationOutline,
+  //   label: "Location",
+  //   value: "Amla, Khategaon, Dewas",
+  // },
 ];
 
 export const link =  [
